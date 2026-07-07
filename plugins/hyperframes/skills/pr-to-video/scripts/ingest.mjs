@@ -15,7 +15,7 @@
 //                      reviews,latestReviews,comments,assignees,reviewDecision,mergedBy
 //   --diff <path>      gh pr diff (raw unified diff)  [optional — brief still builds without it]
 // Writes (under --out-dir, default ./capture/extracted):
-//   tokens.json        synthetic design tokens (colors:[] → claude native palette)
+//   tokens.json        synthetic design tokens (colors:[] → code-editorial native palette)
 //   visible-text.txt   the narrative SOURCE: a readable plain-text brief assembled
 //                      from title + meta + people + body + commits + changed files + a
 //                      budget-bounded selection of representative diff hunks.
@@ -116,7 +116,7 @@ const labels = Array.isArray(pr.labels)
 // just gets an avatar downloaded and can still be excluded by story-design.
 const BOT_DENYLIST = new Set(
   [
-    "claude",
+    "code-editorial",
     "graphite-app",
     "dependabot",
     "github-actions",

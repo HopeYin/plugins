@@ -667,7 +667,7 @@ Control bridge actions: play, pause, seek, set-muted, set-playback-rate, enable-
 | ------------------------- | ----------------------------------------------------------------------- |
 | hyperframes               | Core framework skill (composition authoring)                            |
 | hyperframes-cli           | All CLI commands as an agent skill                                      |
-| hyperframes-media         | Media workflows (TTS, transcribe, captions integration)                 |
+| media-use                 | Media workflows (TTS, transcribe, captions integration)                 |
 | hyperframes-registry      | Installing blocks/components                                            |
 | hyperframes-contrast      | WCAG audit (scripts/contrast-report.mjs)                                |
 | hyperframes-animation-map | Per-tween bbox + flags report                                           |
@@ -708,6 +708,6 @@ Control bridge actions: play, pause, seek, set-muted, set-playback-rate, enable-
 
 27 mdx pages in docs/guides/ and docs/packages/:
 
-**Guides:** 4k-rendering, claude-design, common-mistakes, deploy, gsap-animation, hdr, html-in-canvas, hyperframes-vs-remotion, open-design, performance, prompting, remove-background, rendering, timeline-editing, troubleshooting, video-editor-cheatsheet, website-to-video, etc.
+**Guides:** 4k-rendering, code-editorial-design, common-mistakes, deploy, gsap-animation, hdr, html-in-canvas, hyperframes-vs-remotion, open-design, performance, prompting, remove-background, rendering, timeline-editing, troubleshooting, video-editor-cheatsheet, website-to-video, etc.
 
 **Packages:** cli.mdx, core.mdx, engine.mdx, player.mdx, producer.mdx, studio.mdx

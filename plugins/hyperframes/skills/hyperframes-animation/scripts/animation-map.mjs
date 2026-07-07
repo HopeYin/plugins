@@ -11,8 +11,7 @@
 //
 // Env:
 //   HYPERFRAMES_SKILL_PKG_VERSION — pin the @hyperframes/producer version used
-//     when bootstrapping (global skill installs cannot infer it; falls back to
-//     @latest with a warning otherwise).
+//     when bootstrapping if the bundled plugin version cannot be inferred.
 
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve, join } from "node:path";

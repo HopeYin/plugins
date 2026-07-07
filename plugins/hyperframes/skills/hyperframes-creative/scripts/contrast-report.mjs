@@ -14,8 +14,7 @@
 //
 // Env:
 //   HYPERFRAMES_SKILL_PKG_VERSION — pin the @hyperframes/producer version used
-//     when bootstrapping (global skill installs cannot infer it; falls back to
-//     @latest with a warning otherwise).
+//     when bootstrapping if the bundled plugin version cannot be inferred.
 //
 // The composition directory must contain an index.html. Raw authoring HTML
 // works — the producer's file server auto-injects the runtime at serve time.

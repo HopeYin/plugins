@@ -464,7 +464,7 @@ project/
 
 ## Example: Beat-by-Beat Format
 
-The two beats below are from the real Claude Design × HyperFrames production video. They show the expected level of specificity — exact timing, exact GSAP values, exact animation sequences.
+The two beats below are from the real Code Editorial × HyperFrames production video. They show the expected level of specificity — exact timing, exact GSAP values, exact animation sequences.
 
 **Why only 2 beats are shown:** Earlier versions of this reference showed all 10 beats, and agents pattern-matched from them regardless of the brand being captured. Moodboard layouts, capabilities grids, and orbital letter closers started appearing in every video. The concepts in those beats are specific to HyperFrames as a product — they should not appear in a video about a fintech tool or a wellness app. Only two beats are shown here to demonstrate the format level, not to suggest these specific techniques.
 
@@ -478,9 +478,9 @@ The two beats below are from the real Claude Design × HyperFrames production vi
 - 0.18s: Orb grows continuously (scale: 0.4→1.4, 0.7s, power1.in). Simultaneously the `.ball-halo` (140% width, 70% height ellipse, accent-tinted radial-gradient, blur: 60px) blooms in (scale: 0.4→1, opacity: 0→1, 0.55s, sine.out)
 - 0.65s: Orb keeps growing as it fades (scale: 1.4→8, opacity: 1→0, 0.4s, power2.in) — the point of light dissolves into pure glow. Halo expands further (scale: 1→1.25, opacity: 0.85)
 - 0.85s: Horizontal beam line emerges from center (scaleX: 0→1, 0.4s, expo.out) with warm box-shadow glow (0 0 24px 1px rgba(255,240,220,0.4))
-- 1.0s: Title "Claude Design × HyperFrames" fades up above the line (opacity: 0→1, y: 14→0, 0.7s, power3.out). Ampersand in italic accent color.
+- 1.0s: Title "Code Editorial × HyperFrames" fades up above the line (opacity: 0→1, y: 14→0, 0.7s, power3.out). Ampersand in italic accent color.
 - 1.3s: Date subtitle appears below the line (0.6s, power2.out). Monospace font, 0.32em letter-spacing, uppercase.
-- 2.2s: Bottom credit line fades in ("This entire video was made with HyperFrames in Claude Design")
+- 2.2s: Bottom credit line fades in ("This entire video was made with HyperFrames in Code Editorial")
 - 3.0–4.4s: Hold — halo breathes (opacity drifts to 0.55, scale to 1.4, sine.inOut), headline drifts slightly (y: -3px)
 - 4.4s: Everything fades to black together (0.6s, power2.in)
 

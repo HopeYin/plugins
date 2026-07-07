@@ -35,7 +35,7 @@ test("hyperframesPackageSpec: resolvable in-repo version pins it", async () => {
   }
 });
 
-// (c) unresolvable + no override -> fail closed rather than bootstrapping @latest.
+// (c) unresolvable + no override -> fail closed rather than bootstrapping a floating version.
 // Copy the loader into an isolated temp dir whose ancestor chain has no hyperframes
 // package.json, and run node from there so cwd cannot resolve one either.
 test("hyperframesPackageSpec: unresolvable requires an explicit version override", () => {
