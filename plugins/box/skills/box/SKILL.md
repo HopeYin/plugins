@@ -39,6 +39,7 @@ First confirm which resources you actually have access to and are able to access
 | Last-resort fallback when MCP is unavailable and CLI is unavailable or not an option | Direct REST | Only after explicit user confirmation and REST auth setup guidance |
 | Building application code (SDK/REST endpoints, webhook handlers) | SDK or REST in code | Not agent tooling — write code the user ships |
 
+The table above is the single source of truth for tool selection — the sections below reference it rather than restate it. When tooling is unavailable, escalate in this order: guide the user through MCP setup first, then CLI setup, and only fall back to direct REST as a last resort after the user explicitly confirms REST fallback is acceptable.
 
 ### Domain routing
 
