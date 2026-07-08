@@ -20,6 +20,8 @@ Do not perform a blind model-string replacement.
 
 First preserve the behavior, latency class, cost class, reasoning level, endpoint contract, tool semantics, cache behavior, and output contract of each usage site. Then make the smallest safe migration. Adopt new GPT-5.6 capabilities only when they solve a measured problem or the user explicitly asks for them.
 
+A model upgrade alone does not authorize adding reasoning fields, changing request schemas, or rewriting tests. Only add explicit reasoning when the old effective behavior is established and omission would change behavior on GPT-5.6.
+
 The main 5.6 migration hazards are:
 
 - choosing Sol for workloads that were intentionally mini, nano, low-cost, or latency-sensitive;
@@ -48,6 +50,7 @@ Classify every usage site before editing:
 4. `prompt migration`
    - The API shape can remain, but representative traces show a prompt-specific regression.
    - Make a surgical prompt edit tied to that failure; do not rewrite a working prompt stack wholesale.
+   - When the task is to update prompting guidance, edit the directly tied prompt surface only. Do not modify runtime request code, model schemas, or tests unless the prompt change requires it.
 5. `optional feature adoption`
    - Pro mode, persisted reasoning, explicit caching, Programmatic Tool Calling, or multi-agent behavior is being added deliberately.
    - Keep this separate from the baseline migration so its effect can be measured.
@@ -70,6 +73,8 @@ Search for more than literal model IDs. Inventory:
 - prompt-cache keys, retention options, stable-prefix construction, and cache metrics;
 - image, PDF, file, OCR, and computer-use inputs;
 - tests, fixtures, snapshots, evals, analytics labels, billing tables, and docs.
+
+When changing a default model, search every active default surface: runtime config, environment/config files, setup docs, tests, CLI defaults, and deployment examples. Update them together.
 
 For each usage site, record:
 
@@ -105,6 +110,8 @@ Important limits to check in live docs:
 
 Do not invent prices, limits, or capability flags. Fetch them from current docs before updating a registry or UI.
 
+For model pickers and registries, preserve existing model entries by default. Add GPT-5.6 Sol, Terra, and Luna as new options unless the user explicitly asks to replace or remove older models. Do not invent pricing, context limits, capabilities, or metadata unless confirmed from canonical docs.
+
 If using the `gpt-5.6` alias, record the returned `response.model` during validation. Do not assume an alias and an explicit Sol slug appear identically in dashboards, rate-limit configuration, analytics, or billing metadata.
 
 ## Preserve effective reasoning before tuning
@@ -120,7 +127,7 @@ This is a behavioral migration hazard:
 For each usage:
 
 1. If effort is explicit, preserve it for the first 5.6 run when supported.
-2. If effort is omitted but the old effective default is known, set that value explicitly so the migration is behavior-preserving.
+2. If effort is omitted and the old effective default is known, add it explicitly only when GPT-5.6's omitted default would change behavior. If both old and new omitted defaults are the same, keep it omitted.
 3. If the old effective value is unknown, do not guess. Flag it and compare the old behavior with 5.6 at the likely baseline.
 4. After the baseline passes, test the same setting and one lower on representative tasks.
 5. Use `xhigh` or `max` only for hard quality-first workloads where evals show a meaningful gain.
@@ -218,6 +225,8 @@ Migration rules:
 - use explicit cache breakpoints only when a measured workload has a stable boundary that implicit caching misses;
 - do not globally convert every prompt to explicit caching;
 - do not send 5.6-only cache fields to older routes in a mixed-model system.
+
+When old and GPT-5.6 routes share a request builder, isolate GPT-5.6-only fields instead of applying them globally.
 
 The new top-level request shape uses `prompt_cache_options`, for example:
 
