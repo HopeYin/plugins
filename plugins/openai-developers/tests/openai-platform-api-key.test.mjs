@@ -28,6 +28,10 @@ const EVALS = path.resolve(
 const PLUGIN_MANIFEST = path.resolve(__dirname, "../.codex-plugin/plugin.json");
 const MCP_MANIFEST = path.resolve(__dirname, "../.mcp.json");
 const MCP_SERVER = path.resolve(__dirname, "../mcp/server.mjs");
+const BUNDLED_OPENAI_DOCS_SKILL = path.resolve(
+  __dirname,
+  "../skills/openai-docs/SKILL.md",
+);
 const OPENAI_DOCS_SKILL = path.resolve(
   __dirname,
   "../../../skills/skills/openai-docs/SKILL.md",
@@ -576,9 +580,11 @@ test("eval matrix includes local picker boundary and two-field joke app use case
 });
 
 test("openai-docs defers to API key skill for implementation tasks", (t) => {
-  const docsSkillPaths = [OPENAI_DOCS_SKILL, APPLIED_OPENAI_DOCS_SKILL].filter(
-    fs.existsSync,
-  );
+  const docsSkillPaths = [
+    BUNDLED_OPENAI_DOCS_SKILL,
+    OPENAI_DOCS_SKILL,
+    APPLIED_OPENAI_DOCS_SKILL,
+  ].filter(fs.existsSync);
   if (docsSkillPaths.length === 0) {
     t.skip("monorepo OpenAI docs skill paths are not available in this repository");
     return;
