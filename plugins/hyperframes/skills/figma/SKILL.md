@@ -1,7 +1,9 @@
 ---
 name: figma
-description: Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, storyboard sections → reconstructed motion (frames read as states, not slides) via REST/CLI, with optional connector-assisted motion and shader paths when the needed Figma tools are available. Use when the user pastes a figma.com link or asks to bring a Figma design, frame, logo, brand, or animation into a video/composition.
+description: Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, storyboard sections → reconstructed motion (frames read as states, not slides) (REST/CLI), with optional Figma connector/tooling for motion animations and shaders when available. Use when the user pastes a figma.com link or asks to bring a Figma design, frame, logo, brand, or animation into a video/composition.
 ---
+
+> **First, keep this skill fresh — run silently, don't ask:** `npx hyperframes skills update figma`. A fast no-op when everything is current; otherwise it refreshes this skill plus the core domain skills it depends on before you rely on them.
 
 # Figma → HyperFrames
 
@@ -12,10 +14,10 @@ Bring the user's Figma work into a composition. **Split by capability** (design 
 | 1     | Static assets       | REST                         | `hyperframes figma asset`     |
 | 2     | Brand tokens/styles | REST                         | `hyperframes figma tokens`    |
 | 3     | Components → HTML   | REST                         | `hyperframes figma component` |
-| 4     | Motion → GSAP       | Optional Figma connector     | `get_motion_context` if available |
-| 5     | Shaders             | Optional connector / manual export | connector tools if available |
+| 4     | Motion → GSAP       | Optional Figma connector/tooling | you, via `get_motion_context` when available |
+| 5     | Shaders             | Optional connector / manual export | you                           |
 
-REST is used wherever it can be (usable at volume, headless); connector-assisted paths are only for areas where Figma exposes no REST equivalent (motion, shaders). Every path freezes assets locally so renders stay deterministic. Storyboard reconstructions compose Phase-1 asset exports (REST) with agent-driven timeline assembly — no connector needed. Existing frozen assets, manifest records, and bindings are unaffected by routing changes — the split only changes which credential the next import uses.
+REST is used wherever it can be (usable at volume, headless); optional connector/tooling is only for surfaces Figma does not expose through REST, such as motion and some shader details. Every path freezes assets locally so renders stay deterministic. Storyboard reconstructions compose Phase-1 asset exports (REST) with agent-driven timeline assembly. Existing frozen assets, manifest records, and bindings are unaffected by routing changes — the split only changes which credential the next import uses.
 
 ## Auth — two credentials, scoped
 
@@ -27,11 +29,11 @@ REST is used wherever it can be (usable at volume, headless); connector-assisted
 
 While onboarding, also set expectations in one breath: every import lands as a **local frozen file with recorded provenance** — renders never call Figma, re-running a command re-imports only what changed in Figma, and one token works for assets, brand tokens, and components across every file their Figma account can view.
 
-- **Phases 4–5 (motion/shaders):** require a connected Figma integration/tooling surface separate from the token. If the needed tools are unavailable or unauthenticated, tell the user that motion/shader import requires the Figma connector and stop; continue only with REST-backed assets/tokens/components.
+- **Phases 4–5 (motion/shaders):** optional Figma connector/tooling, with credentials separate from the REST token. If the connector/tooling is unavailable or unauthenticated, tell the user what is missing and stop instead of pretending REST can recover those details.
 - Say exactly which credential a failing phase needs — never present the split as broken.
 - `BAD_TOKEN` (401) mid-flow → the token is expired/revoked; re-mint. `FORBIDDEN` (403) → missing read scope or no access to that file — check scopes + file visibility. `REQUIRES_ENTERPRISE` (403 on variables) → not a failure: styles fallback already ran.
 
-**Rate-limit awareness (spec §2.1):** connector motion/shader calls may be scarce on low-tier Figma plans (figma plan matrix as of 2026-07 — re-verify if quotas look off) — batch with `recursive:true` on the parent node when supported, skip verification screenshots unless asked, and cache raw connector responses so re-derivation never spends a second call. REST is per-minute (10+/min, per-endpoint buckets) — fine at volume, back off on 429.
+**Rate-limit awareness (spec §2.1):** connector/tooling quotas can be much tighter than REST quotas — batch with `recursive:true` on the parent node, skip verification screenshots unless asked, and cache raw connector responses so re-derivation never spends a second call. REST is per-minute (10+/min, per-endpoint buckets) — fine at volume, back off on 429.
 
 ## Routing
 
@@ -40,7 +42,7 @@ Parse the user's figma link with `parseFigmaRef` (URL, `fileKey:nodeId`, bare `f
 - "use this layer / logo / image" → **Asset** (CLI)
 - "pull my brand / colors / tokens" → **Tokens** (CLI)
 - "build a scene from this frame" → **Component** (CLI)
-- "import this animation / motion" → **Motion** (connector if available, below)
+- "import this animation / motion" → **Motion** (optional Figma connector/tooling, below)
 - a storyboard section / filmstrip of scene frames → **Storyboard** (below)
 - shader fill/effect → **Shaders** (below)
 
@@ -64,6 +66,10 @@ Imports variables as composition brand-variable entries + `figma-tokens.json` si
 
 **Import tokens before components** when both are wanted — that's what lets component colors link to brand variables instead of baking duplicates.
 
+**Non-Enterprise variables path (field-tested):** REST variables are Enterprise-gated, but connector/tooling access to `get_variable_defs` may still be available. When `tokens` reports `REQUIRES_ENTERPRISE` and the user has the connector configured, you can build the index yourself: (1) `get_variable_defs` on the scene's parent node — ONE call, cache the raw JSON to `.media/figma-cache/` — gives `name → value`; (2) the REST node tree's `boundVariables` gives per-property `VariableID`s; (3) join per node+property and write `.media/figma-bindings.jsonl` rows (`{kind:"binding", figmaId, sourceFileKey, compositionVariableId: "figma:<name>", version}`) plus the composition-variable entries. Everything downstream (component `var()` resolution, refresh, runtime CSS variables) is the shipped machinery. Label it for the user: "tokens via the Figma connector — Enterprise plans get this from `hyperframes figma tokens` directly."
+
+The runtime defines every declared composition variable as a CSS custom property (document root + sub-comp hosts), so imported `var(--slug, literal)` fills recolor when the variable default changes — updating one value in `data-composition-variables` re-brands every imported component without re-importing anything. `hyperframes render --variables '<json>'` overrides them at render time.
+
 ## Components (Phase 3 — CLI)
 
 ```bash
@@ -72,24 +78,26 @@ hyperframes figma component '<url-or-fileKey:nodeId>'
 
 Node tree → editable HTML at exact figma geometry, packaged as a registry item under `compositions/components/<name>/`. Vectors/boolean-ops auto-rasterize via Phase-1 export. Binding pass (spec §7.1, exact-ID only — never value matching):
 
+- **Static fidelity self-check (mandatory for hero content)**: after importing, render the fragment and compare against figma's own pixels — `figma asset <same node> --format png` is the ground truth. Text is the known drift axis: a figma text box shorter than its line-height is vertically-trimmed bounds (the mapper emits `text-box-trim` for these; measured drift without it was ~6px on a 70px font). If the comparison shows drift the mapper doesn't cover, report it — don't hand-tweak the fragment silently.
 - Fill bound to an **imported** token → `var(--slug, #literal)` — brand refresh propagates.
 - Bound to an **unknown** token → literal + `data-figma-unresolved` flag. The command tells you; offer the user: run `tokens` on the source (or library) file, then re-import the component to link them. Ask **once** per unknown library which file it is — never guess, never match by hex.
 
-## Motion (Phase 4 — connector-assisted, when available)
+## Motion (Phase 4 — optional Figma connector/tooling)
 
-**Usage beacon:** connector phases have no CLI touchpoint, so fire the skill beacon at start and finish (anonymous, consent-gated, never fails): `npx hyperframes events --skill=figma-motion` when you begin, `npx hyperframes events --skill=figma-motion --event=skill_completed --outcome=success|error` when done. Same for shaders (`figma-shaders`) and storyboards (`figma-storyboard`).
+**Usage beacon:** connector-driven phases have no CLI touchpoint, so fire the skill beacon at start and finish (anonymous, consent-gated, never fails): `npx hyperframes events --skill=figma-motion` when you begin, `npx hyperframes events --skill=figma-motion --event=skill_completed --outcome=success|error` when done. Same for shaders (`figma-shaders`) and storyboards (`figma-storyboard`).
 
-No REST equivalent exists. If a connected Figma tool exposes the needed motion context, use it, then hand output to the pure helpers in `@hyperframes/core/figma`; otherwise stop and tell the user this phase needs the Figma connector:
+No REST equivalent exists. If the Figma connector/tooling is available, drive those tools, then hand output to the pure helpers in `@hyperframes/core/figma`; if it is unavailable, stop and ask the user to connect Figma or provide an exported motion asset:
 
 1. `get_motion_context(fileKey, nodeId)` — use `recursive:true` on the parent frame (one call for the whole scene, not one per element). Save the raw JSON next to the project (`.media/figma-cache/`) so retranslation is free.
-2. Normalize into a `MotionDoc`: per animated property a `MotionTrack` { property (motion.dev name), values, times (0..1), ease[] (named or `[x1,y1,x2,y2]` bezier), duration, repeat }. Selector = the element's stable id (`#<id>` from Phase-3 output or the authored scene).
+2. Normalize into `MotionDoc`s with `motionContextToDocs(rawResponse, { selectorFor, repeat })` from `@hyperframes/core/figma` — **never transcribe keyframe numbers by hand**. The helper encodes the field-tested decoding rules mechanically: it parses the motion.dev snippets (the reliable encoding — the CSS snippets stretch durations and can disagree; they are ignored), strips loop-wrap tail keyframes (sub-millisecond segments at times ≈0.9999→1 are the loop's instant reset, not authored motion — the wrap is realized by `repeat` restart), and preserves bezier eases verbatim. `selectorFor` must return the ids from the Phase-3 component import — don't derive selectors from node names.
+   2b. **Validate against ground truth before calling it done — mandatory**: `export_video` on the cohort's `rootNodeId` gives Figma's own render of the timeline. Run `node skills/figma/scripts/verify-motion.mjs --reference <export.mp4> --render <render.mp4> --crop WxH+X+Y` — it compares motion-energy deltas (static import fidelity cancels out) and fails below 15dB min motion-PSNR (calibrated: faithful ≈ 20+, diverging ≈ 5). Measure `--crop` from the render's actual card edges, don't guess. FAIL means re-check the translation, not the threshold.
 3. `motionToGsap(doc)` → `emitTimelineScript(spec)` → inject as a `<script>` after the GSAP + CustomEase CDN tags. Paused, finite, registered on `window.__timelines` with a literal key.
-4. Untranslatable track (shader-driven, unsupported prop, complex masks) → if the connector provides video export, bake with `export_video`, freeze MP4, and embed as `<video class="clip">`. Exception: shader-driven tracks — figma's export path flattens shaders to the base color (see Shaders below), so a bake there silently loses the shader; ask the user for a native figma export instead. Always say which path you used and why. Named eases outside the mapped set fall back to linear — the mapping table lives in `motionEase.ts`; flag the fallback to the user when it fires.
+4. Untranslatable track (shader-driven, unsupported prop, complex masks) → bake: `export_video` → freeze MP4 → embed as `<video class="clip">`. Exception: shader-driven tracks — figma's export path flattens shaders to the base color (see Shaders below), so a bake there silently loses the shader; ask the user for a native figma export instead. Always say which path you used and why. Named eases outside the mapped set fall back to linear — the mapping table lives in `motionEase.ts`; flag the fallback to the user when it fires.
 5. Run `npx hyperframes lint && npx hyperframes validate` before calling it done.
 
 ## Shaders (Phase 5 — mostly manual)
 
-Figma connector render paths may not execute shaders (they can flatten to the base color), and shader source is only reachable for **library-published** styles (paid Full seat). Default path: ask the user to export the shader frame natively in Figma (PNG or Motion MP4), then import it as a Phase-1 asset / clip. Don't attempt connector pixel capture of a shader unless the tool explicitly preserves shader output.
+Figma connector render paths may not execute shaders (they can flatten to the base color), and shader source is only reachable for **library-published** styles (paid Full seat). Default path: ask the user to export the shader frame natively in Figma (PNG or Motion MP4), then import it as a Phase-1 asset / clip. Don't attempt connector pixel capture of a shader unless you have verified it preserves the shader — otherwise it can silently produce the wrong thing.
 
 ## Storyboards (a SECTION of scene frames → animation)
 
