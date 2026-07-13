@@ -317,7 +317,7 @@ test("skill asks before building API-backed apps when any usable key exists", ()
 
   assert.match(
     description,
-    /Use when Codex is asked to build, run, test, debug, or configure an OpenAI-backed or provider-unspecified AI app, UI, script, CLI, generator, or tool that needs live API access/,
+    /Use when Codex is asked to build, run, test, debug, or configure an OpenAI-backed or provider-unspecified AI app, UI, script, CLI, generator, or tool/,
   );
   assert.match(
     description,
@@ -333,7 +333,7 @@ test("skill asks before building API-backed apps when any usable key exists", ()
   );
   assert.match(
     description,
-    /Treat this as the credential gate before live API work: inspect safely, ask reuse-vs-new/,
+    /Otherwise treat this as the credential gate: inspect safely, ask reuse-vs-new before API work/,
   );
   assert.match(
     skill,
@@ -373,7 +373,7 @@ test("skill asks before building API-backed apps when any usable key exists", ()
   );
   assert.match(
     skill,
-    /When another implementation skill also applies and the request adds API-backed\s+functionality or requires a live API call, run this skill first only to inspect\s+credentials safely and send the credential decision message\./,
+    /When another implementation skill also applies, run this skill first only to inspect\s+credentials safely and send the credential decision message\./,
   );
   assert.match(
     skill,
@@ -436,11 +436,11 @@ test("skill makes the key-choice gate impossible to miss", () => {
   assert.match(skill, /## Mandatory First Step/);
   assert.match(
     skill,
-    /Before adding new API-backed functionality, changing API-backed behavior beyond\s+the model\/prompt migration exception above, or making a live OpenAI API request:\s+1\. Inspect for a usable `OPENAI_API_KEY` without printing it\.\s+2\. Unless the user explicitly asked for a new key, ask whether to reuse an\s+existing key or create a new one\. If none exists, ask whether to create one\.\s+3\. Stop until the user answers\./,
+    /Before editing, testing, running, debugging, or configuring any code that calls\s+the OpenAI API, except for the model\/prompt migration source edits and offline\s+validation explicitly allowed above:\s+1\. Inspect for a usable `OPENAI_API_KEY` without printing it\.\s+2\. Unless the user explicitly asked for a new key, ask whether to reuse an\s+existing key or create a new one\. If none exists, ask whether to create one\.\s+3\. Stop until the user answers\./,
   );
   assert.match(
     skill,
-    /This applies even if:\s+- a usable key already exists\s+- no secret will be written\s+- the task is "just create a script"/,
+    /This applies even if:\s+- a usable key already exists\s+- no live API call will be made\s+- no secret will be written\s+- the task is "just create a script"/,
   );
   assert.match(
     skill,
@@ -448,7 +448,7 @@ test("skill makes the key-choice gate impossible to miss", () => {
   );
   assert.match(
     skill,
-    /The credential decision is a hard stop for new API-backed functionality and live\s+API requests\. Before the user answers, do not create directories, scaffold files,\s+draft implementation plans, wire API-dependent code, run smoke tests, or give\s+placeholder\/manual key setup instructions\. It does not block the model\/prompt\s+migration exception above\./,
+    /The credential decision is a hard stop outside the model\/prompt migration\s+exception above\. Before the user answers, do not create directories, scaffold\s+files, draft implementation plans, wire API-dependent code, run smoke tests, or\s+give placeholder\/manual key setup instructions\./,
   );
   assert.match(
     skill,

@@ -1,6 +1,6 @@
 ---
 name: openai-platform-api-key
-description: 'Use when Codex is asked to build, run, test, debug, or configure an OpenAI-backed or provider-unspecified AI app, UI, script, CLI, generator, or tool that needs live API access, especially requests phrased only as "using AI" or generators driven by forms/user input; also use for OPENAI_API_KEY or sk-proj setup. Do not gate model or prompt migrations that can proceed with source edits and offline validation. Treat this as the credential gate before live API work: inspect safely, ask reuse-vs-new, and never expose plaintext.'
+description: 'Use when Codex is asked to build, run, test, debug, or configure an OpenAI-backed or provider-unspecified AI app, UI, script, CLI, generator, or tool, especially requests phrased only as "using AI" or generators driven by forms/user input; also use for OPENAI_API_KEY or sk-proj setup. Do not gate model or prompt migrations that can proceed with source edits and offline validation. Otherwise treat this as the credential gate: inspect safely, ask reuse-vs-new before API work, and never expose plaintext.'
 ---
 
 # OpenAI API Key
@@ -31,7 +31,7 @@ If API access is needed and no usable key is found, offer secure key provisionin
 
 ## Coordination With Implementation Skills
 
-When another implementation skill also applies and the request adds API-backed functionality or requires a live API call, run this skill first only to inspect credentials safely and send the credential decision message. Until reuse-existing-key vs create-new-key is resolved, it outranks design-first and implementation-first flows, including `build-web-apps:frontend-app-builder`; do not design UI, choose architecture, inspect API examples, write code, or run smoke tests. Model and prompt migrations are the exception above: complete requested source/configuration edits and offline validation without a credential decision, then use this skill only before any live API request. After the user answers, hand off to the appropriate implementation, docs, or frontend skill.
+When another implementation skill also applies, run this skill first only to inspect credentials safely and send the credential decision message. Until reuse-existing-key vs create-new-key is resolved, it outranks design-first and implementation-first flows, including `build-web-apps:frontend-app-builder`; do not design UI, choose architecture, inspect API examples, write code, or run smoke tests. Model and prompt migrations are the narrow exception above: complete requested source/configuration edits and offline validation without a credential decision, then use this skill only before any live API request. After the user answers, hand off to the appropriate implementation, docs, or frontend skill.
 
 ## Safety Rules
 
@@ -50,7 +50,7 @@ When another implementation skill also applies and the request adds API-backed f
 
 ## Mandatory First Step
 
-Before adding new API-backed functionality, changing API-backed behavior beyond the model/prompt migration exception above, or making a live OpenAI API request:
+Before editing, testing, running, debugging, or configuring any code that calls the OpenAI API, except for the model/prompt migration source edits and offline validation explicitly allowed above:
 
 1. Inspect for a usable `OPENAI_API_KEY` without printing it.
 2. Unless the user explicitly asked for a new key, ask whether to reuse an existing key or create a new one. If none exists, ask whether to create one.
@@ -59,12 +59,13 @@ Before adding new API-backed functionality, changing API-backed behavior beyond 
 This applies even if:
 
 - a usable key already exists
+- no live API call will be made
 - no secret will be written
 - the task is "just create a script"
 
 Finding an existing key is not permission to proceed. It only changes the question you ask.
 
-The credential decision is a hard stop for new API-backed functionality and live API requests. Before the user answers, do not create directories, scaffold files, draft implementation plans, wire API-dependent code, run smoke tests, or give placeholder/manual key setup instructions. It does not block the model/prompt migration exception above. The only allowed pre-gate work is safe repo convention discovery and credential presence checks that do not print secrets.
+The credential decision is a hard stop outside the model/prompt migration exception above. Before the user answers, do not create directories, scaffold files, draft implementation plans, wire API-dependent code, run smoke tests, or give placeholder/manual key setup instructions. The only allowed pre-gate work is safe repo convention discovery and credential presence checks that do not print secrets.
 
 ## Credential Decision Messages
 
