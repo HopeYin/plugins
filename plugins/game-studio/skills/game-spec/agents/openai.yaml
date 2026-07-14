@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Spec"
+  short_description: "Freeze a machine-readable vertical-slice contract"
+  default_prompt: "Use $game-spec to turn this browser-game brief into a frozen, machine-readable GameSpec."

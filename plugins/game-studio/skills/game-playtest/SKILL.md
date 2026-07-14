@@ -1,76 +1,49 @@
 ---
 name: game-playtest
-description: Run browser-game playtests and frontend QA. Use when the user asks for smoke tests, screenshot-based verification, browser automation, HUD or overlay review, or structured issue-finding in a browser game.
+description: Play browser games through their real UI and report player-visible QA findings across controls, transitions, HUD, canvas, responsive layout, and visual states. Use for exploratory playtesting, manual browser QA, screenshot review, or real-input verification; route repeatable GameSpec scenarios to game-eval.
 ---
 
 # Game Playtest
 
-## Overview
+Play the slice the way a player does, through the visible UI and documented controls. Use `../game-eval/SKILL.md` alongside this skill when the project has a frozen GameSpec or deterministic bridge.
 
-Use this skill to test browser games the way players experience them: through boot, input, scene transitions, HUD readability, and visual state changes. Prefer browser automation and screenshot review when the project supports it.
+## Real UI Pass
 
-## Preferred Workflow
+1. Boot the normal development or packaged URL and reach the first actionable screen.
+2. Use actual keyboard, pointer, touch, pause, and restart controls named by the game.
+3. Complete the core loop to a visible success or failure state.
+4. Capture screenshots at the GameSpec state names; add exploratory screenshots only when they explain a finding.
+5. Check the DOM HUD separately from the canvas, then inspect how they compose at desktop and one narrow viewport.
+6. Record console, page, request, and HTTP errors.
+7. Report findings in severity order with exact input sequences and owning surface.
 
-1. Boot the game and confirm the first actionable screen.
-2. Exercise the main verbs.
-3. Capture screenshots from representative states.
-4. Check the UI layer independently from the render layer.
-5. Report findings in severity order with reproduction steps.
+Do not use test-bridge dispatch as the only playtest. It proves deterministic rules, not physical input wiring or player legibility.
 
-## Tooling Guidance
+## Deterministic Companion Pass
 
-- Prefer Playwright or equivalent browser automation already available in the repo.
-- When the game is canvas or WebGL heavy, screenshots are mandatory because DOM assertions alone miss visual regressions.
-- Use screenshots to judge playfield obstruction and HUD weight, not just correctness of text or layout.
-- When deterministic automation is not practical, do a structured manual pass and capture evidence.
-- For 3D rendering bugs or unexplained frame cost, use SpectorJS and browser performance tooling rather than guessing from code alone.
+Route scenario contracts, seeded reset, state snapshots, named screenshot assertions, and rubric scoring to `../game-eval/SKILL.md`. A release candidate needs both:
+
+- one real-input route through the core loop;
+- deterministic evidence for every required GameSpec state.
 
 ## Common Checks
 
-### 2D checks
+- first-load readiness and objective clarity;
+- input feedback, focus handling, and pause/restart behavior;
+- sprite or geometry alignment and outcome readability;
+- HUD overlap, menu transitions, and playfield visibility;
+- desktop/narrow viewport sanity and safe areas;
+- reduced-motion behavior when applicable;
+- visual state matching the attached JSON snapshot;
 
-- sprite alignment and baseline consistency
-- hit or hurt animation readability
-- HUD overlap with the playfield
-- command menu state changes
-- tile or platform readability
-- input-state feedback and turn-state clarity
+For explicit 3D work, also check camera reset, pointer-lock transitions, depth readability, asset stalls, collision proxies, and WebGL performance cliffs.
 
-### 3D checks
+## Reporting
 
-- first-load playability versus dashboard-like chrome
-- persistent overlay weight versus playfield visibility
-- camera control and camera reset behavior
-- pointer-lock or drag-look transitions when menus and overlays open
-- depth readability and silhouette clarity
-- secondary panels collapsed or dismissible during normal play
-- resize behavior
-- WebGL context loss or renderer fallback behavior
-- material or lighting regressions
-- GLB or texture streaming stalls
-- collision proxy or physics mismatch
-- performance cliffs tied to post-processing or asset load
-
-## Responsive and Browser Checks
-
-- desktop and mobile viewport sanity
-- safe-area and notch issues where relevant
-- reduced-motion behavior for UI transitions
-- keyboard, pointer, and pause-state handling
-- React state and scene state synchronization when the project uses React Three Fiber
-
-## Reporting Standard
-
-Lead with findings. Keep each finding concrete:
-
-- what the user sees
-- how to reproduce it
-- why it matters
-- what likely subsystem owns it
+For each finding include what the player sees, the exact controls and named state, screenshot/snapshot evidence, why it matters, and the likely owning subsystem. End with the real-input path completed and any GameSpec state that remains unproven.
 
 ## References
 
-- Shared architecture: `../web-game-foundations/SKILL.md`
+- Deterministic evaluation: `../game-eval/SKILL.md`
 - Frontend review cues: `../game-ui-frontend/SKILL.md`
-- 3D debugging notes: `../../references/webgl-debugging-and-performance.md`
-- Full checklist: `../../references/playtest-checklist.md`
+- Broader checklist: `../../references/playtest-checklist.md`

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openai.com/game-studio/scenario.schema.json",
+  "title": "Game Studio browser scenarios",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "baseURL", "scenarios"],
+  "properties": {
+    "schemaVersion": { "const": "0.1" },
+    "baseURL": { "type": "string", "format": "uri" },
+    "scenarios": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "seed", "steps"],
+        "properties": {
+          "id": { "$ref": "#/$defs/id" },
+          "seed": { "type": "integer", "minimum": 0, "maximum": 2147483647 },
+          "steps": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "action": { "$ref": "#/$defs/id" },
+                "count": { "type": "integer", "minimum": 1 },
+                "frames": { "type": "integer", "minimum": 0 },
+                "expect": { "type": "object" },
+                "screenshot": { "$ref": "#/$defs/id" }
+              },
+              "anyOf": [
+                { "required": ["action"] },
+                { "required": ["frames"] },
+                { "required": ["expect"] },
+                { "required": ["screenshot"] }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+  }
+}

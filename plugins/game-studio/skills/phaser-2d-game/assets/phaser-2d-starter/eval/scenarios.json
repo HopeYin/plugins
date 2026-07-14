@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "0.1",
+  "baseURL": "http://127.0.0.1:4173",
+  "scenarios": [
+    {
+      "id": "route-three-signals",
+      "seed": 5601,
+      "steps": [
+        { "expect": { "status": "ready", "score": 0 }, "screenshot": "ready" },
+        { "action": "move-left", "count": 6 },
+        { "expect": { "status": "playing" }, "screenshot": "playing" },
+        { "action": "move-up", "count": 3 },
+        { "action": "collect" },
+        { "action": "move-right", "count": 7 },
+        { "action": "move-down", "count": 5 },
+        { "action": "collect" },
+        { "action": "move-left", "count": 7 },
+        { "action": "move-up", "count": 2 },
+        { "action": "collect" },
+        { "expect": { "status": "won", "score": 3 }, "screenshot": "won" }
+      ]
+    }
+  ]
+}

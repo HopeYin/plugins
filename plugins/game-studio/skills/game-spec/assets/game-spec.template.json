@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.1",
+  "revision": 1,
+  "id": "game-id",
+  "title": "Game title",
+  "brief": "One paragraph describing the fantasy, player verbs, and visible stakes.",
+  "sessionLengthSeconds": 90,
+  "verbs": ["move", "collect"],
+  "coreLoop": ["Read the next target", "Act", "See immediate feedback", "Repeat under increasing pressure"],
+  "objective": "Complete one measurable objective.",
+  "success": "Describe the visible win condition.",
+  "failure": ["Describe each visible fail condition."],
+  "actions": [
+    { "id": "move-left", "bindings": ["ArrowLeft", "KeyA"], "effect": "Move one step left." },
+    { "id": "restart", "bindings": ["KeyR"], "effect": "Reset to the seeded start state." }
+  ],
+  "states": [
+    { "id": "ready", "observableWhen": "The game accepts player input." },
+    { "id": "won", "observableWhen": "The success condition is visibly complete." }
+  ],
+  "determinism": {
+    "seed": 5601,
+    "rng": "seeded",
+    "fixedStepMs": null,
+    "resetAction": "restart",
+    "bridge": "window.__GAME_STUDIO__"
+  },
+  "evaluation": {
+    "scenarioFile": "eval/scenarios.json",
+    "requiredScreenshots": ["ready", "won"]
+  },
+  "outOfScope": ["Additional levels", "Persistent progression", "Production asset pipeline"],
+  "changes": []
+}

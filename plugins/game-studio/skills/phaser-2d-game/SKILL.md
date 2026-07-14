@@ -1,88 +1,56 @@
 ---
 name: phaser-2d-game
-description: Implement 2D browser games with Phaser. Use when the user wants a Phaser, TypeScript, and Vite stack for scenes, gameplay systems, cameras, sprite animation, and DOM-overlay HUD patterns.
+description: Implement deterministic 2D browser-game vertical slices with Phaser, TypeScript, Vite, a DOM HUD, semantic input actions, and a browser test bridge. Use for Phaser implementation, scene/gameplay architecture, or when copying and adapting the Game Studio 2D starter.
 ---
 
 # Phaser 2D Game
 
-## Overview
+Use this as the default implementation path after `game-spec` freezes the vertical-slice contract.
 
-Use this skill for the main execution path in this plugin. Phaser is the default stack for 2D browser games here because it handles rendering, timing, sprites, cameras, and scene orchestration well without forcing gameplay rules into the framework.
+## Start From the Stable Template
 
-Preferred stack:
+Copy `assets/phaser-2d-starter/` into the target project. It contains a small playable loop with:
 
-- Phaser
-- TypeScript
-- Vite
-- DOM-based HUD or menus layered over the game canvas
+- Phaser + TypeScript + Vite;
+- deterministic seed-derived state;
+- one explicit keyboard-to-action map;
+- a DOM HUD shell around the canvas;
+- `window.__GAME_STUDIO__` for reset, semantic actions, explicit stepping, and JSON-safe state;
+- `data-game-state` markers for named screenshot checkpoints;
+- no remote assets or runtime services.
+
+Replace the example rules and presentation while preserving these boundaries. Keep GameSpec action and state IDs synchronized with `src/actions.ts`, the HUD marker, and eval scenarios.
 
 ## Architecture
 
-1. Keep gameplay state outside Phaser scenes.
-   - Systems own rules, turn order, movement, combat, inventory, objectives, and progression.
-   - Phaser scenes adapt system state into sprites, camera motion, animation playback, and effects.
-2. Make scenes thin.
-   - Boot and asset preload
-   - Menu or shell scene
-   - Gameplay scene
-   - Optional overlay or debug scene
-3. Keep renderer-facing objects disposable.
-   - Sprite containers, emitters, tweens, and camera rigs are view state, not source of truth.
-4. Favor stable asset manifest keys over direct file-path references throughout gameplay code.
+1. Keep simulation state and rules outside Phaser display objects.
+2. Let the scene adapt state into sprites, shapes, cameras, animation, and effects.
+3. Send production keyboard/pointer input and evaluation input through the same semantic action dispatcher.
+4. Return JSON-safe state from the bridge; never expose Phaser objects or timestamps.
+5. Use seeded randomness and explicit fixed stepping when gameplay depends on time.
+6. Keep dense text, status, menus, and settings in the DOM HUD unless an in-world presentation is essential.
 
-## Implementation Guidance
+## Vertical-Slice Order
 
-- Use one integration boundary where the scene reads simulation state and emits input actions back.
-- Prefer deterministic system updates over scene-local mutation.
-- Treat HUD and menus as DOM when text, status density, or responsiveness matter.
-- Keep animation state derived from gameplay state rather than ad hoc sprite flags.
-
-## 2D Modes Covered Well
-
-- Turn-based grids and tactics
-- Top-down exploration
-- Side-view action platformers
-- Character-action combat with sprite animation
-- Lightweight management or deck-driven battle scenes
-
-## Camera and Presentation
-
-- Choose the camera model early: locked, follow, room-based, or tactical-pan.
-- Keep camera logic separate from game rules.
-- Use restrained screen shake, hit-stop, and parallax. Effects should improve readability, not obscure it.
-
-## UI Integration
-
-- Use DOM overlays for HUD, command menus, settings, and narrative panels.
-- Keep the canvas responsible for the world, combat readability, and motion.
-- Avoid shoving dense text or complex settings UIs into Phaser unless the project explicitly needs an in-canvas presentation.
-
-## Asset Organization
-
-- `characters/`
-- `environment/`
-- `ui/`
-- `fx/`
-- `audio/`
-- `data/`
-
-Keep manifest keys human-readable and stable.
-
-## Default Directory Shape
-
-See `../../references/phaser-architecture.md` for a concrete module split.
+1. Copy the starter and replace its bundled `game-spec.json` with the frozen project spec.
+2. Implement the objective and visible success/failure state before adding content breadth.
+3. Make each named state observable in both the HUD/canvas and `data-game-state`.
+4. Run the game through real controls.
+5. Route deterministic review to `../game-eval/SKILL.md`.
 
 ## Anti-Patterns
 
-- Game rules inside `update()` loops without a system boundary
-- Scene-to-scene state passed through mutable global objects
-- HUD text rendered in the game canvas just because it is convenient
-- Asset paths embedded everywhere instead of a manifest layer
-- Overusing generic React dashboard patterns for game UI
+- Game rules hidden in an `update()` loop.
+- Separate control paths for humans and evals.
+- Unseeded randomness, wall-clock IDs, or arbitrary automation sleeps.
+- Mutable globals passed between scenes.
+- HUD text embedded in canvas solely for convenience.
+- Expanding assets, levels, or systems beyond the frozen slice.
 
 ## References
 
-- Shared architecture: `../web-game-foundations/SKILL.md`
+- Frozen contract: `../game-spec/SKILL.md`
+- Deterministic evaluation: `../game-eval/SKILL.md`
+- Deeper module structure: `../../references/phaser-architecture.md`
 - Frontend direction: `../game-ui-frontend/SKILL.md`
-- Sprite workflow: `../sprite-pipeline/SKILL.md`
-- Phaser structure: `../../references/phaser-architecture.md`
+- Sprite workflow when required: `../sprite-pipeline/SKILL.md`

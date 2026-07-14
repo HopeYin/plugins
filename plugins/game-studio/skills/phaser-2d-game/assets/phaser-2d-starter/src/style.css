@@ -1,0 +1,88 @@
+:root {
+  color: #e8f4ff;
+  background: #030811;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 0%, #10233e 0%, #030811 60%);
+}
+
+button, kbd { font: inherit; }
+
+#game-shell {
+  position: relative;
+  width: min(1120px, calc(100vw - 32px));
+  overflow: hidden;
+  border: 1px solid #284565;
+  border-radius: 24px;
+  background: #08111f;
+  box-shadow: 0 30px 90px rgb(0 0 0 / 45%);
+}
+
+#hud {
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 18px 24px;
+  border-bottom: 1px solid #17304d;
+  background: rgb(5 14 27 / 92%);
+}
+
+.eyebrow { margin: 0 0 4px; color: #56d6ff; font-size: 11px; letter-spacing: 0.18em; }
+h1 { margin: 0; font-size: clamp(18px, 3vw, 28px); }
+dl { display: flex; gap: 28px; margin: 0 0 0 auto; }
+dl div { min-width: 74px; }
+dt { color: #7894b3; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; }
+dd { margin: 4px 0 0; font-weight: 700; }
+
+button {
+  padding: 10px 14px;
+  color: #e8f4ff;
+  border: 1px solid #365d85;
+  border-radius: 10px;
+  background: #10233e;
+  cursor: pointer;
+}
+
+#game { width: 100%; aspect-ratio: 16 / 9; }
+#game canvas { display: block; width: 100% !important; height: 100% !important; }
+
+footer {
+  display: flex;
+  gap: 24px;
+  padding: 12px 24px;
+  color: #9bb2c9;
+  border-top: 1px solid #17304d;
+  font-size: 13px;
+}
+
+kbd { padding: 2px 6px; border: 1px solid #365d85; border-radius: 5px; background: #10233e; }
+
+#game-state-marker {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  padding: 5px 8px;
+  color: #08111f;
+  border-radius: 999px;
+  background: #59f6b1;
+  font: 700 10px/1 ui-monospace, monospace;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 720px) {
+  #hud { align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+  dl { order: 3; width: 100%; margin: 0; }
+  button { margin-left: auto; }
+  footer { flex-direction: column; gap: 6px; }
+}

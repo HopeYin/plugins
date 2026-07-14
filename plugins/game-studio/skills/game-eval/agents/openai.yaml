@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Eval"
+  short_description: "Playtest deterministic browser-game states"
+  default_prompt: "Use $game-eval to run deterministic browser scenarios, capture named screenshots and state, and score the vertical slice."

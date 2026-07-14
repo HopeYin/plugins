@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "0.1",
+  "revision": 1,
+  "id": "neon-relay",
+  "title": "Neon Relay",
+  "brief": "Route three signals across a neon grid by moving a courier to each beacon and confirming the connection, with immediate HUD and playfield feedback.",
+  "sessionLengthSeconds": 60,
+  "verbs": ["move", "collect", "restart"],
+  "coreLoop": ["Locate the beacon", "Move onto it", "Route the signal", "Repeat until three signals are connected"],
+  "objective": "Route three signals.",
+  "success": "The HUD reads 3 / 3 and the game enters the won state.",
+  "failure": [],
+  "actions": [
+    { "id": "move-left", "bindings": ["ArrowLeft", "KeyA"], "effect": "Move one grid cell left." },
+    { "id": "move-right", "bindings": ["ArrowRight", "KeyD"], "effect": "Move one grid cell right." },
+    { "id": "move-up", "bindings": ["ArrowUp", "KeyW"], "effect": "Move one grid cell up." },
+    { "id": "move-down", "bindings": ["ArrowDown", "KeyS"], "effect": "Move one grid cell down." },
+    { "id": "collect", "bindings": ["Space"], "effect": "Route a signal while standing on its beacon." },
+    { "id": "restart", "bindings": ["KeyR"], "effect": "Reset to the seeded start state." }
+  ],
+  "states": [
+    { "id": "ready", "observableWhen": "The seeded board is visible and accepts input." },
+    { "id": "playing", "observableWhen": "The player has taken an action and fewer than three signals are routed." },
+    { "id": "won", "observableWhen": "Three signals are routed." }
+  ],
+  "determinism": {
+    "seed": 5601,
+    "rng": "seed-derived beacon sequence",
+    "fixedStepMs": null,
+    "resetAction": "restart",
+    "bridge": "window.__GAME_STUDIO__"
+  },
+  "evaluation": {
+    "scenarioFile": "eval/scenarios.json",
+    "requiredScreenshots": ["ready", "playing", "won"]
+  },
+  "outOfScope": ["Additional levels", "Enemies", "Audio", "Persistent progression", "Production art"],
+  "changes": []
+}

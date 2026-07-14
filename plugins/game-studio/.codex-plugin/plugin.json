@@ -1,7 +1,7 @@
 {
   "name": "game-studio",
-  "version": "0.1.2",
-  "description": "Design, prototype, and ship browser games with guided 2D and 3D workflows, asset pipelines, and playtesting support.",
+  "version": "0.2.0",
+  "description": "Build browser-game vertical slices through a frozen spec, stable starter, deterministic evaluation, refinement, and publishing handoff.",
   "author": {
     "name": "OpenAI",
     "email": "support@openai.com",
@@ -19,13 +19,15 @@
     "rapier",
     "webgl",
     "sprites",
-    "playtest"
+    "playtest",
+    "playwright",
+    "game-spec"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Game Studio",
-    "shortDescription": "Design, prototype, and ship browser games",
-    "longDescription": "Plan, prototype, and build browser games with guided workflows for gameplay systems, UI, asset pipelines, and playtesting across 2D and 3D projects.",
+    "shortDescription": "Build and evaluate playable browser-game slices",
+    "longDescription": "Move from a browser-game brief to a frozen GameSpec, stable Phaser starter, real UI playtest, deterministic screenshot and state evaluation, refinement, and Sites publishing handoff.",
     "developerName": "OpenAI",
     "category": "Developer Tools",
     "capabilities": [
@@ -36,7 +38,7 @@
     "privacyPolicyURL": "https://openai.com/policies/privacy-policy/",
     "termsOfServiceURL": "https://openai.com/policies/terms-of-use/",
     "defaultPrompt": [
-      "Design a browser game and plan the core loop"
+      "Turn my browser-game idea into a tested playable vertical slice"
     ],
     "brandColor": "#0F766E",
     "composerIcon": "./assets/game-studio.svg",

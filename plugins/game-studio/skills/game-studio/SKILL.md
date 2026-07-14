@@ -1,94 +1,55 @@
 ---
 name: game-studio
-description: Route early browser-game work. Use when the user needs stack selection and workflow planning across design, implementation, assets, and playtesting before moving to a specialist skill.
+description: Run the end-to-end browser-game studio loop from brief and frozen GameSpec through a stable starter, implementation, real UI playtest, screenshot/state review, refinement, and publish handoff. Use when a user asks to make, prototype, iterate on, or ship a browser game and needs one executable workflow across the specialist skills.
 ---
 
 # Game Studio
 
-## Overview
+Drive toward one playable vertical slice. Default to the small Phaser 2D path unless the user explicitly requests an existing 3D stack.
 
-Use this skill as the umbrella entrypoint for browser-game work. Default to a 2D Phaser path unless the user explicitly asks for 3D, Three.js, React Three Fiber, shader-heavy rendering, or another WebGL-first direction.
+## Executable Loop
 
-This plugin is intentionally asymmetric:
+Keep one visible artifact trail through every stage:
 
-- 2D is the strongest execution path in v1.
-- 3D has one opinionated default ecosystem: vanilla Three.js for plain TypeScript or Vite apps, React Three Fiber for React-hosted 3D apps, and GLB or glTF 2.0 as the default shipping asset format.
-- Shared architecture, UI, and playtest practices apply to both.
+1. **Brief:** Reduce the request to fantasy, player verbs, session length, objective, success/failure, and exclusions.
+2. **Freeze:** Use `../game-spec/SKILL.md` to create and validate `game-spec.json`. Freeze action IDs, observable state IDs, seed, and required screenshots before coding.
+3. **Start stable:** For 2D work, copy `../phaser-2d-game/assets/phaser-2d-starter/` instead of inventing new plumbing. Preserve its input map, DOM HUD boundary, deterministic state, bridge, and state marker.
+4. **Implement:** Build only the smallest loop that reaches a visible success or failure state. Keep rules outside renderer objects and keep GameSpec IDs stable.
+5. **Run:** Start the repository's normal development command and reach the first actionable state.
+6. **Play the real UI:** Use real keyboard or pointer input for the main player path. Confirm the bridge is an evaluation boundary, not a replacement for playable controls.
+7. **Review evidence:** Use `../game-eval/SKILL.md` for deterministic scenarios, named screenshots, console/network capture, state snapshots, and the concise rubric.
+8. **Refine:** Fix the smallest player-visible issue set, then replay affected scenarios and every required screenshot state. Revise GameSpec first if intent changes.
+9. **Package and publish:** Use `../game-publish-sites/SKILL.md` to produce a browser-self-contained build and Sites handoff. Publish only when the user explicitly authorizes it and Sites is available.
 
-## Use This Skill When
+Do not call a slice complete because it builds. Completion requires a real-input playthrough plus deterministic evidence for every required state.
 
-- the user is still choosing a stack
-- the request spans multiple domains such as runtime, UI, asset pipeline, and QA
-- the user says "help me build a game" without naming the implementation path
+## Routing
 
-## Do Not Stay Here When
+- Frozen vertical-slice contract: `../game-spec/SKILL.md`
+- Default 2D implementation and starter: `../phaser-2d-game/SKILL.md`
+- Deterministic browser evaluation: `../game-eval/SKILL.md`
+- Manual or exploratory browser QA: `../game-playtest/SKILL.md`
+- Static packaging and Sites handoff: `../game-publish-sites/SKILL.md`
+- HUD and menu direction: `../game-ui-frontend/SKILL.md`
+- 2D sprite work when the slice needs it: `../sprite-pipeline/SKILL.md`
+- Explicit vanilla Three.js requests: `../three-webgl-game/SKILL.md`
+- Explicit React Three Fiber requests: `../react-three-fiber-game/SKILL.md`
+- Explicit 3D asset shipping work: `../web-3d-asset-pipeline/SKILL.md`
 
-- the runtime is clearly plain Three.js
-- the runtime is clearly React Three Fiber
-- the task is clearly a shipped-asset problem
-- the task is clearly frontend-only or QA-only
+The same brief → freeze → implement → playtest → review → refine → publish loop applies to explicit 3D work, but this prototype adds no new 3D starter or pipeline.
 
-Once the intent is clear, route to the most specific specialist skill and continue from there.
+## Required Handoff
 
-## Routing Rules
+For an implemented slice, return:
 
-1. Classify the request before designing or coding:
-   - `2D default`: Phaser, sprites, tilemaps, top-down, side-view, grid tactics, action platformers.
-   - `3D + plain TS/Vite`: imperative scene control, engine-like loops, non-React apps, direct Three.js work.
-   - `3D + React`: React-hosted product surfaces, declarative scene composition, shared React state, UI-heavy 3D apps.
-   - `3D asset pipeline`: GLB, glTF, texture packaging, compression, LOD, runtime asset size.
-   - `Alternative engine`: Babylon.js or PlayCanvas requests, usually as comparison or ecosystem fit questions.
-   - `Shared`: core loop design, frontend direction, save/debug/perf boundaries, browser QA.
-2. Route to the specialist skills immediately after classification:
-   - Shared architecture and engine choice: `../web-game-foundations/SKILL.md`
-   - Deep 2D implementation: `../phaser-2d-game/SKILL.md`
-   - Vanilla Three.js implementation: `../three-webgl-game/SKILL.md`
-   - React-hosted 3D implementation: `../react-three-fiber-game/SKILL.md`
-   - 3D asset shipping and optimization: `../web-3d-asset-pipeline/SKILL.md`
-   - HUD and menu direction: `../game-ui-frontend/SKILL.md`
-   - 2D sprite generation and normalization: `../sprite-pipeline/SKILL.md`
-   - Browser QA and visual review: `../game-playtest/SKILL.md`
-3. Keep one coherent plan across the routed skills. Do not let engine, UI, asset, and QA decisions drift apart.
+- frozen GameSpec revision and path;
+- starter or stack used and development command;
+- real-input playtest path;
+- required screenshot and state-snapshot paths;
+- console/network error result and rubric summary;
+- unresolved GameSpec gaps;
+- packaged output or next refinement action.
 
-## Default Workflow
+## Worked Example
 
-1. Lock the game fantasy and player verbs.
-2. Define the core loop, failure states, progression, and target play session length.
-3. Choose the implementation track:
-   - Default to Phaser for 2D browser games.
-   - Choose vanilla Three.js when the project is explicitly 3D and wants direct render-loop control in a plain TypeScript or Vite app.
-   - Choose React Three Fiber when the project already lives in React or wants declarative scene composition with shared React state.
-   - Choose raw WebGL only when the user explicitly wants a custom renderer or shader-first surface.
-4. Define the UI surface early. Browser games usually need a DOM HUD and menu layer even when the playfield is canvas or WebGL.
-   - For 3D starter scaffolds, default to a low-chrome HUD that preserves the playfield and keeps secondary panels collapsed.
-5. Decide the asset workflow:
-   - 2D characters and effects: use `sprite-pipeline`.
-   - 3D models, textures, and shipping format: use `web-3d-asset-pipeline`.
-6. Close with a playtest loop before calling the work production-ready.
-
-## Output Expectations
-
-- For planning requests, return a game-specific plan with stack choice, gameplay loop, UI surface, asset workflow, and test approach.
-- For implementation requests, keep the chosen stack obvious in the file structure and code boundaries.
-- For mixed requests, preserve the plugin default: 2D Phaser first unless the user asks for something else.
-- When the user asks about Babylon.js or PlayCanvas, compare them honestly but keep Three.js and R3F as the primary code-generation defaults unless the user explicitly chooses another engine.
-
-## References
-
-- Engine selection: `../../references/engine-selection.md`
-- Three.js stack: `../../references/threejs-stack.md`
-- React Three Fiber stack: `../../references/react-three-fiber-stack.md`
-- 3D asset pipeline: `../../references/web-3d-asset-pipeline.md`
-- Vanilla Three.js starter: `../../references/threejs-vanilla-starter.md`
-- React Three Fiber starter: `../../references/react-three-fiber-starter.md`
-- Frontend prompting patterns: `../../references/frontend-prompts.md`
-- Playtest checklist: `../../references/playtest-checklist.md`
-
-## Examples
-
-- "Help me prototype a browser tactics game."
-- "I need a Phaser-based action game loop with a HUD and menus."
-- "I want a Three.js exploration demo with WebGL lighting and browser-safe UI."
-- "I want a React-based 3D configurator with React Three Fiber."
-- "Optimize my GLB assets for the web and keep the file sizes under control."
-- "Set up the asset workflow for consistent 2D sprite animations."
+Read `../../examples/neon-relay/workflow.md` for one prompt-to-playable example backed by a complete GameSpec and deterministic scenario contract.

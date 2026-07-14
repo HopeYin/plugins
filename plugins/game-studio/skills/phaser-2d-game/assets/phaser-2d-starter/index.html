@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08111f" />
+    <title>Neon Relay</title>
+  </head>
+  <body>
+    <main id="game-shell">
+      <header id="hud" aria-label="Game status">
+        <div>
+          <p class="eyebrow">NEON RELAY // TRAINING SLICE</p>
+          <h1>Route three signals</h1>
+        </div>
+        <dl>
+          <div><dt>Signals</dt><dd id="score">0 / 3</dd></div>
+          <div><dt>State</dt><dd id="status">Ready</dd></div>
+        </dl>
+        <button id="restart" type="button">Restart <kbd>R</kbd></button>
+      </header>
+      <section id="game" aria-label="Neon Relay playfield"></section>
+      <footer>
+        <span>Move <kbd>WASD</kbd> or <kbd>Arrows</kbd></span>
+        <span>Route signal <kbd>Space</kbd></span>
+      </footer>
+      <output id="game-state-marker" data-game-state="boot" aria-live="polite">STATE: BOOT</output>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

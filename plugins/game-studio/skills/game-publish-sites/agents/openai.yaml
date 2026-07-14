@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish Game to Sites"
+  short_description: "Package and hand off a browser game"
+  default_prompt: "Use $game-publish-sites to final-check and package this browser game, then hand it off to Sites publishing when available."
