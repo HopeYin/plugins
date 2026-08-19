@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "outlook-calendar": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@microsoft/workiq@latest",
+        "mcp"
+      ]
+    }
+  }
+}

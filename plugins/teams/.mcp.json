@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "teams": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@microsoft/workiq@latest",
+        "mcp"
+      ]
+    }
+  }
+}

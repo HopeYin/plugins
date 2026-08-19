@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "google-drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "oauth": {
+        "client_id": "<GOOGLE_DESKTOP_PUBLIC_CLIENT_ID>"
+      }
+    }
+  }
+}
