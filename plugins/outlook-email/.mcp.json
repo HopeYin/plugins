@@ -3,8 +3,7 @@
     "outlook-email": {
       "url": "https://agent365.svc.cloud.microsoft/agents/servers/mcp_MailTools",
       "oauth": {
-        "client_id": "ba081686-5d24-4bc6-a0d6-d034ecffed87",
-        "callback_port": 12798
+        "client_id": "ba081686-5d24-4bc6-a0d6-d034ecffed87"
       },
       "scopes": [
         "https://agent365.svc.cloud.microsoft/agents/servers/mcp_MailTools/.default",
