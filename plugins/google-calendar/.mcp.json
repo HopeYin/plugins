@@ -3,6 +3,20 @@
     "google-calendar": {
       "type": "http",
       "url": "https://calendarmcp.googleapis.com/mcp/v1",
+      "scopes": [
+        "https://www.googleapis.com/auth/calendar",
+        "https://www.googleapis.com/auth/calendar.acls",
+        "https://www.googleapis.com/auth/calendar.calendarlist",
+        "https://www.googleapis.com/auth/calendar.calendarlist.readonly",
+        "https://www.googleapis.com/auth/calendar.calendars",
+        "https://www.googleapis.com/auth/calendar.calendars.readonly",
+        "https://www.googleapis.com/auth/calendar.events",
+        "https://www.googleapis.com/auth/calendar.events.freebusy",
+        "https://www.googleapis.com/auth/calendar.events.readonly",
+        "https://www.googleapis.com/auth/calendar.freebusy",
+        "https://www.googleapis.com/auth/calendar.readonly",
+        "https://www.googleapis.com/auth/calendar.settings.readonly"
+      ],
       "oauth": {
         "client_id": "77377267392-9l01lg5gpscp40cc30cc5gke03n6uu3b.apps.googleusercontent.com"
       }

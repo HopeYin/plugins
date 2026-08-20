@@ -3,6 +3,13 @@
     "gmail": {
       "type": "http",
       "url": "https://gmailmcp.googleapis.com/mcp/v1",
+      "scopes": [
+        "https://mail.google.com/",
+        "https://www.googleapis.com/auth/gmail.modify",
+        "https://www.googleapis.com/auth/gmail.compose",
+        "https://www.googleapis.com/auth/gmail.readonly",
+        "https://www.googleapis.com/auth/gmail.metadata"
+      ],
       "oauth": {
         "client_id": "77377267392-9l01lg5gpscp40cc30cc5gke03n6uu3b.apps.googleusercontent.com"
       }

@@ -3,6 +3,11 @@
     "google-drive": {
       "type": "http",
       "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "scopes": [
+        "https://www.googleapis.com/auth/drive",
+        "https://www.googleapis.com/auth/drive.readonly",
+        "https://www.googleapis.com/auth/drive.file"
+      ],
       "oauth": {
         "client_id": "77377267392-9l01lg5gpscp40cc30cc5gke03n6uu3b.apps.googleusercontent.com"
       }
