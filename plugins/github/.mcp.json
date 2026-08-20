@@ -5,7 +5,9 @@
       "args": [
         "stdio",
         "--toolsets",
-        "all"
+        "all",
+        "--oauth-client-id",
+        "Iv23liVemv8A9if9v0F2"
       ]
     }
   }

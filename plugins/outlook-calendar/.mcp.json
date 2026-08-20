@@ -1,11 +1,16 @@
 {
   "mcpServers": {
     "outlook-calendar": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@microsoft/workiq@latest",
-        "mcp"
+      "url": "https://agent365.svc.cloud.microsoft/agents/servers/mcp_CalendarTools",
+      "oauth": {
+        "client_id": "ba081686-5d24-4bc6-a0d6-d034ecffed87",
+        "callback_port": 12798
+      },
+      "scopes": [
+        "https://agent365.svc.cloud.microsoft/agents/servers/mcp_CalendarTools/.default",
+        "openid",
+        "profile",
+        "offline_access"
       ]
     }
   }
