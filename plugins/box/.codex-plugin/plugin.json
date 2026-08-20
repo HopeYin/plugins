@@ -16,7 +16,7 @@
       "Find a Box file and summarize the key points"
     ],
     "developerName": "Box",
-    "displayName": "Box",
+    "displayName": "[Testing] Box",
     "logo": "./assets/logo.png",
     "longDescription": "Search and reference your documents in Box and work safely with Box content flows.",
     "privacyPolicyURL": "https://www.box.com/legal/privacypolicy",
