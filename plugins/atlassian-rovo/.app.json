@@ -2,7 +2,7 @@
   "apps": {
     "atlassian-rovo": {
       "id": "connector_692de805e3ec8191834719067174a384",
-      "required": true
+      "required": false
     }
   }
 }
