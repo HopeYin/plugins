@@ -1,7 +1,7 @@
 {
-  "name": "openai-curated-remote",
+  "name": "openai-api-testing",
   "interface": {
-    "displayName": "Codex remote plugin experiments"
+    "displayName": "Codex API testing plugins"
   },
   "plugins": [
     {
