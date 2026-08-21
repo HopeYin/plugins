@@ -11,6 +11,7 @@
         "https://www.googleapis.com/auth/gmail.metadata"
       ],
       "oauth": {
+        "callback_port": 12798,
         "client_id": "77377267392-9l01lg5gpscp40cc30cc5gke03n6uu3b.apps.googleusercontent.com"
       }
     }
