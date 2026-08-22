@@ -1,0 +1,25 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "otter-ai",
+  "version": "1.0.3",
+  "description": "The Otter.ai MCP server connects Codex to your meeting intelligence, enabling search and retrieval of transcripts, summaries, action items, and meeting metadata directly within your workflow.",
+  "keywords": [
+    "otter",
+    "meetings",
+    "transcripts",
+    "summaries",
+    "action-items",
+    "productivity"
+  ],
+  "author": "Otter.ai (https://otter.ai)",
+  "homepage": "https://otter.ai",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Otter.ai",
+    "shortDescription": "The Otter.ai MCP server connects Codex to your meeting intelligence, enabling search and retrieval of tra...",
+    "longDescription": "The Otter.ai MCP server connects Codex to your meeting intelligence, enabling search and retrieval of transcripts, summaries, action items, and meeting metadata directly within your workflow. Search meetings by keyword, date range, attendee, folder, or channel, then fetch full transcripts with speaker attribution. Use it to prepare for meetings by reviewing past discussions, extract decisions from historical conversations, or synthesize insights across your meeting archive. Supports both personal and enterprise Otter.ai workspaces.",
+    "developerName": "Otter.ai",
+    "websiteURL": "https://otter.ai",
+    "category": "Communication"
+  }
+}
