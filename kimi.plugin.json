@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "hebbia",
+  "version": "1.0.3",
+  "description": "Institutional research and financial workflows",
+  "author": "Hebbia (https://www.hebbia.ai)",
+  "homepage": "https://www.hebbia.ai",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Hebbia",
+    "shortDescription": "Institutional research and financial workflows",
+    "longDescription": "Bring Hebbia's institutional intelligence into ChatGPT and Codex. The Hebbia MCP server lets you tap into your firm's knowledge and premium public to make better decisions on deals and investments and run financial workflows from research to reports, slides, and financial models.",
+    "developerName": "Hebbia",
+    "websiteURL": "https://www.hebbia.ai",
+    "category": "Business & Operations"
+  }
+}
