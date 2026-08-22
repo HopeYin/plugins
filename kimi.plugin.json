@@ -1,0 +1,25 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "asana",
+  "version": "0.1.4",
+  "description": "Work with your Asana tasks, subtasks, comments, due dates, and project details to create summaries, understand priorities, and prepare clear status updates.",
+  "keywords": [
+    "asana",
+    "tasks",
+    "project-management",
+    "productivity",
+    "collaboration",
+    "work-management"
+  ],
+  "author": "Asana, Inc. (https://asana.com)",
+  "homepage": "https://asana.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Asana",
+    "shortDescription": "Read and manage Asana",
+    "longDescription": "Work with your Asana tasks, subtasks, comments, due dates, and project details to create summaries, understand priorities, and prepare clear status updates.",
+    "developerName": "Asana, Inc.",
+    "websiteURL": "https://asana.com",
+    "category": "Productivity"
+  }
+}
