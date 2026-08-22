@@ -1,0 +1,25 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "hubspot",
+  "version": "2.0.3",
+  "description": "Work with your HubSpot data to analyze patterns, create and update records, and manage your CRM operations.",
+  "keywords": [
+    "hubspot",
+    "crm",
+    "sales",
+    "pipeline",
+    "customer-support"
+  ],
+  "author": "HubSpot (https://www.hubspot.com/)",
+  "homepage": "https://www.hubspot.com/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "HubSpot",
+    "shortDescription": "Work with your HubSpot data to analyze patterns, create and update records, and manage your CRM operations.",
+    "longDescription": "Work with your HubSpot data to analyze patterns, create and update records, and manage your CRM operations. Read from and write to deals, contacts, companies, tickets, engagements, and other objects you have permission to access. Prepare reports, update deal stages, log calls and emails, create tasks, or review pipeline details before meetings. Use it for quick updates in chat or comprehensive CRM management, all grounded in your actual HubSpot data.",
+    "developerName": "HubSpot",
+    "websiteURL": "https://www.hubspot.com/",
+    "category": "Business & Operations"
+  }
+}
