@@ -1,0 +1,26 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "shopify",
+  "version": "1.3.3",
+  "description": "Search Shopify docs, generate and validate GraphQL, Liquid, and UI extension code.",
+  "keywords": [
+    "shopify",
+    "mcp",
+    "graphql",
+    "liquid",
+    "storefront",
+    "admin-api"
+  ],
+  "author": "Shopify (https://shopify.dev/)",
+  "homepage": "https://github.com/Shopify/Shopify-AI-Toolkit",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Shopify",
+    "shortDescription": "Build Shopify apps, themes, storefronts, and APIs",
+    "longDescription": "Shopify developer tools for searching Shopify documentation, generating and validating GraphQL, Liquid, Hydrogen, Functions, UI extension, and CLI workflows. Skill scripts send usage telemetry to shopify.dev by default; set OPT_OUT_INSTRUMENTATION=true to disable.",
+    "developerName": "Shopify",
+    "websiteURL": "https://shopify.dev/",
+    "category": "Developer Tools"
+  }
+}
