@@ -1,0 +1,31 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "cloudflare",
+  "version": "0.1.2",
+  "description": "Cloudflare platform plugin with curated skills for Workers, Wrangler, and Agents SDK plus the official Cloudflare API MCP server.",
+  "keywords": [
+    "cloudflare",
+    "workflow",
+    "deployment",
+    "edge-functions",
+    "edge",
+    "analytics",
+    "wrangler",
+    "agents-sdk",
+    "serverless",
+    "ai-gateway"
+  ],
+  "author": "Cloudflare (https://workers.cloudflare.com/)",
+  "homepage": "https://workers.cloudflare.com/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Cloudflare",
+    "shortDescription": "Cloudflare platform guidance with official MCP",
+    "longDescription": "Bring Cloudflare platform guidance into Codex with curated skills for the broader platform, Wrangler CLI, and the Agents SDK, plus the official Cloudflare API MCP server for authenticated access to live account data and workflows across Workers, Pages, storage, AI, networking, security, and analytics services.",
+    "developerName": "Cloudflare",
+    "websiteURL": "https://workers.cloudflare.com/",
+    "category": "Developer Tools"
+  },
+  "mcpServers": "./.mcp.json"
+}
