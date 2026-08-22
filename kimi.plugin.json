@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "scite",
+  "version": "1.0.3",
+  "description": "Scite delivers answers grounded in peer-reviewed research you can verify.",
+  "author": "Scite (https://www.scite.ai)",
+  "homepage": "https://www.scite.ai",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Scite",
+    "shortDescription": "Scite delivers answers grounded in peer-reviewed research you can verify.",
+    "longDescription": "Scite delivers answers grounded in peer-reviewed research you can verify. Each response is backed by real scientific sources, with citations that show how studies have been supported, disputed, or contextualized by other researchers. Behind the scenes, Scite’s proprietary citation-based ranking model prioritizes trustworthy, validated research, helping users move beyond claims to evidence.",
+    "developerName": "Scite",
+    "websiteURL": "https://www.scite.ai",
+    "category": "Education & Research"
+  }
+}
