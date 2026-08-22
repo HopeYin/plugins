@@ -1,0 +1,25 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "mixpanel",
+  "version": "2.0.3",
+  "description": "Query and analyze Mixpanel",
+  "keywords": [
+    "mixpanel",
+    "analytics",
+    "segmentation",
+    "funnels",
+    "retention",
+    "events"
+  ],
+  "author": "Mixpanel (https://mixpanel.com/home)",
+  "homepage": "https://mixpanel.com/home",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Mixpanel",
+    "shortDescription": "Query and analyze Mixpanel",
+    "longDescription": "Query and analyze your Mixpanel data directly in ChatGPT. Run segmentation, funnel, and retention analyses, explore your event taxonomy, manage Lexicon metadata, and resolve data quality issues - all without leaving your conversation.\n\nWith the Mixpanel MCP server connected, ChatGPT can reason about your product analytics alongside your code, documents, and decisions. Ask questions in plain language, drill into user behavior, and get answers grounded in your actual data.",
+    "developerName": "Mixpanel",
+    "websiteURL": "https://mixpanel.com/home",
+    "category": "Data & Analytics"
+  }
+}
