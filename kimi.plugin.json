@@ -1,0 +1,18 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "box",
+  "version": "0.0.3",
+  "description": "Search and reference your documents",
+  "author": "OpenAI (https://www.box.com/home)",
+  "homepage": "https://www.box.com/home",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Box",
+    "shortDescription": "Search and reference your documents",
+    "longDescription": "Search and reference your documents in Box and work safely with Box content flows from Codex.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://www.box.com/home",
+    "category": "Productivity"
+  }
+}
