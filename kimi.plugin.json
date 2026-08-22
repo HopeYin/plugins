@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "myregistry-com",
+  "version": "1.0.3",
+  "description": "MyRegistry.com helps make gift-giving easy for friends & family to get you the gifts you really want!",
+  "author": "MyRegistry.com (https://www.myregistry.com/)",
+  "homepage": "https://www.myregistry.com/",
+  "license": "MIT",
+  "interface": {
+    "displayName": "MyRegistry.com",
+    "shortDescription": "MyRegistry.com helps make gift-giving easy for friends & family to get you the gifts you really want!",
+    "longDescription": "MyRegistry.com helps make gift-giving easy for friends & family to get you the gifts you really want! Create a universal gift list for weddings, baby showers, birthdays, or any celebration and add gifts from any store.",
+    "developerName": "MyRegistry.com",
+    "websiteURL": "https://www.myregistry.com/",
+    "category": "Other"
+  }
+}
