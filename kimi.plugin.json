@@ -1,0 +1,32 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "build-web-apps",
+  "version": "0.1.2",
+  "description": "Build web apps with frontend asset design, browser testing, UI components, payments, and database guidance.",
+  "keywords": [
+    "build-web-apps",
+    "build",
+    "product-apps",
+    "frontend",
+    "image-generation",
+    "browser-testing",
+    "frontend-debugging",
+    "stripe",
+    "supabase",
+    "shadcn",
+    "full-stack",
+    "frontend-qa"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://openai.com/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Build Web Apps",
+    "shortDescription": "Build frontend-focused web apps with generated assets, browser testing, payments, and databases",
+    "longDescription": "Use Build Web Apps to create frontend application surfaces with Codex-generated visual assets, verify them with the Browser plugin and built-in app browser, compose shadcn/ui, wire Stripe payments, and design or tune Supabase/Postgres data flows.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://openai.com/",
+    "category": "Developer Tools"
+  }
+}
