@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "particl-market-research",
+  "version": "1.0.3",
+  "description": "Particl Market Research helps teams answer ecommerce research questions directly in Codex.",
+  "author": "Particl (https://www.particl.com)",
+  "homepage": "https://www.particl.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Particl Market Research",
+    "shortDescription": "Particl Market Research helps teams answer ecommerce research questions directly in Codex.",
+    "longDescription": "Particl Market Research helps teams answer ecommerce research questions directly in Codex. It supports company discovery, product catalog research, product detail and variant analysis, market leader discovery, market trend analysis, marketing asset discovery, retail event tracking, sales timeseries, and product mix breakdowns.\n\nThe app uses your authenticated Particl account and returns structured market intelligence data from Particl APIs.",
+    "developerName": "Particl",
+    "websiteURL": "https://www.particl.com",
+    "category": "Education & Research"
+  }
+}
