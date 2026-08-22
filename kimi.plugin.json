@@ -1,0 +1,18 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "chronograph-gp",
+  "version": "1.0.0",
+  "description": "Portfolio monitoring, valuations, and analytics for private capital GP teams",
+  "author": "Chronograph (https://www.chronograph.pe/)",
+  "homepage": "https://www.chronograph.pe/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Chronograph GP",
+    "shortDescription": "Trusted portfolio data for private capital GP teams",
+    "longDescription": "Chronograph GP provides portfolio monitoring, valuations, and analytics for private capital General Partner users. Query trusted portfolio data, analyze investments, surface company-level metrics, and access private markets portfolio data using natural language.",
+    "developerName": "Chronograph",
+    "websiteURL": "https://www.chronograph.pe/",
+    "category": "Finance"
+  }
+}
