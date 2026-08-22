@@ -1,0 +1,26 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "magicpath",
+  "version": "0.1.1",
+  "description": "Use MagicPath to find, inspect, install, create, and edit UI components from Codex.",
+  "keywords": [
+    "magicpath",
+    "codex",
+    "ui-components",
+    "design",
+    "react",
+    "tailwind"
+  ],
+  "author": "MagicPathAI (https://github.com/MagicPathAI)",
+  "homepage": "https://github.com/MagicPathAI/agent-skills",
+  "license": "UNLICENSED",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "MagicPath",
+    "shortDescription": "Find, install, and author MagicPath UI components from Codex",
+    "longDescription": "Use MagicPath through the magicpath-ai CLI to search UI components, inspect source, install React and TypeScript components into applications, work with team projects and themes, and create or edit canvas components from local code.",
+    "developerName": "MagicPathAI",
+    "websiteURL": "https://www.magicpath.ai/",
+    "category": "Developer Tools"
+  }
+}
