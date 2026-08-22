@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "windsor-ai",
+  "version": "1.0.3",
+  "description": "Windsor.ai connects your marketing and business data sources to Codex so you can ask questions in natural...",
+  "author": "Windsor.ai (https://windsor.ai)",
+  "homepage": "https://windsor.ai",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Windsor.ai",
+    "shortDescription": "Windsor.ai connects your marketing and business data sources to Codex so you can ask questions in natural...",
+    "longDescription": "Windsor.ai connects your marketing and business data sources to Codex so you can ask questions in natural language and get answers from your connected accounts.\n\nCommon data sources customers connect include: Google Ads, Meta (Facebook) Ads, Instagram, LinkedIn Ads, LinkedIn Company Pages, TikTok Ads, GA4, Google Search Console, YouTube Analytics, Google Business Profile, HubSpot, Salesforce, Shopify, Klaviyo, Amazon Ads, Microsoft Ads (Bing), Google Merchant Center, Stripe, GoHighLevel, and more.  ￼",
+    "developerName": "Windsor.ai",
+    "websiteURL": "https://windsor.ai",
+    "category": "Data & Analytics"
+  }
+}
