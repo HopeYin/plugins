@@ -1,0 +1,27 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "github",
+  "version": "0.1.6",
+  "description": "Inspect repositories, triage pull requests and issues, debug CI, and publish changes through a hybrid GitHub connector and CLI workflow.",
+  "keywords": [
+    "github",
+    "pull-request",
+    "code-review",
+    "issues",
+    "ci",
+    "actions"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://github.com/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "GitHub",
+    "shortDescription": "Triage PRs, issues, CI, and publish flows",
+    "longDescription": "Use GitHub to inspect repositories, review pull requests, address feedback, debug failing Actions checks, and prepare code changes for review through a connector-first workflow with targeted CLI fallbacks.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://github.com/",
+    "category": "Developer Tools"
+  },
+  "mcpServers": "./.mcp.json"
+}
