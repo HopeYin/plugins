@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "coveo",
+  "version": "1.0.2",
+  "description": "Search your enterprise content",
+  "author": "Coveo (https://www.coveo.com)",
+  "homepage": "https://www.coveo.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Coveo",
+    "shortDescription": "Search your enterprise content",
+    "longDescription": "Search your enterprise content",
+    "developerName": "Coveo",
+    "websiteURL": "https://www.coveo.com",
+    "category": "Productivity"
+  }
+}
