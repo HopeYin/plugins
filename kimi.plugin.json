@@ -1,0 +1,23 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "circleci",
+  "version": "1.0.4",
+  "description": "Build, test, and deploy any application",
+  "keywords": [
+    "circleci",
+    "ci/cd",
+    "ci"
+  ],
+  "author": "CircleCI (https://circleci.com)",
+  "homepage": "https://circleci.com",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "CircleCI",
+    "shortDescription": "Build, test, and deploy any application",
+    "longDescription": "Bring testing, deployment, and CI best practices into Codex",
+    "developerName": "CircleCI",
+    "websiteURL": "https://circleci.com",
+    "category": "Developer Tools"
+  }
+}
