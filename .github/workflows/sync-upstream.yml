@@ -37,10 +37,12 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Regenerate Kimi manifests
-        run: python scripts/generate_kimi_manifests.py
+      - name: Regenerate Kimi manifests and per-plugin branches
+        run: |
+          python scripts/generate_kimi_manifests.py
+          python scripts/generate_plugin_branches.py
 
-      - name: Commit and push changes
+      - name: Commit and push main branch changes
         run: |
           git add -A
           if git diff --cached --quiet; then

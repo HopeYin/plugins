@@ -21,6 +21,7 @@ def main():
     run(["git", "fetch", "upstream"])
     run(["git", "merge", "upstream/main", "--no-edit"])
     run([sys.executable, "scripts/generate_kimi_manifests.py"])
+    run([sys.executable, "scripts/generate_plugin_branches.py"])
 
     status = run(["git", "status", "--short"], capture_output=True)
     if not status.stdout.strip():
