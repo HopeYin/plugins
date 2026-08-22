@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "help-scout",
+  "version": "1.0.3",
+  "description": "Connect to sync Help Scout mailboxes and conversations for use in Codex.",
+  "author": "OpenAI (https://www.helpscout.com/)",
+  "homepage": "https://www.helpscout.com/",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Help Scout",
+    "shortDescription": "Connect to sync Help Scout mailboxes and conversations for use in Codex.",
+    "longDescription": "Connect to sync Help Scout mailboxes and conversations for use in Codex.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://www.helpscout.com/",
+    "category": "Productivity"
+  }
+}
