@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "taxdown",
+  "version": "1.0.3",
+  "description": "TaxDown te ayuda a resolver dudas fiscales en España, tanto para particulares como autónomos: deducciones,...",
+  "author": "TAXDOWN S.L. (https://taxdown.es/)",
+  "homepage": "https://taxdown.es/",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Taxdown",
+    "shortDescription": "TaxDown te ayuda a resolver dudas fiscales en España, tanto para particulares como autónomos: deducciones,...",
+    "longDescription": "TaxDown te ayuda a resolver dudas fiscales en España, tanto para particulares como autónomos: deducciones, IRPF, renta y obligaciones fiscales, con respuestas claras y orientadas a tu caso.",
+    "developerName": "TAXDOWN S.L.",
+    "websiteURL": "https://taxdown.es/",
+    "category": "Finance"
+  }
+}
