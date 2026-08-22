@@ -1,0 +1,26 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "clay",
+  "version": "1.0.2",
+  "description": "Find and engage prospects",
+  "keywords": [
+    "clay",
+    "gtm",
+    "sales",
+    "prospecting",
+    "lead-enrichment",
+    "contacts",
+    "accounts"
+  ],
+  "author": "Clay (https://www.clay.com)",
+  "homepage": "https://www.clay.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Clay",
+    "shortDescription": "Find and engage prospects",
+    "longDescription": "Find and engage prospects",
+    "developerName": "Clay",
+    "websiteURL": "https://www.clay.com",
+    "category": "Business & Operations"
+  }
+}

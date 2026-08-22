@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "skywatch",
+  "version": "1.0.3",
+  "description": "Search and explore satellite imagery from top providers including Vantor, Planet, Airbus, and more, all in...",
+  "author": "SkyWatch Space Applications Inc. (https://skywatch.com)",
+  "homepage": "https://skywatch.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "SkyWatch",
+    "shortDescription": "Search and explore satellite imagery from top providers including Vantor, Planet, Airbus, and more, all in...",
+    "longDescription": "Search and explore satellite imagery from top providers including Vantor, Planet, Airbus, and more, all in one place. SkyWatch lets you find archive imagery by location, date, resolution, and cloud cover, compare pricing across providers, and browse available satellites and product offerings. Results include direct links to view and order imagery on SkyWatch Explore.",
+    "developerName": "SkyWatch Space Applications Inc.",
+    "websiteURL": "https://skywatch.com",
+    "category": "Productivity"
+  }
+}

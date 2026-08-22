@@ -1,0 +1,18 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "chronograph-lp",
+  "version": "1.0.3",
+  "description": "Portfolio monitoring and analytics for private capital LP teams",
+  "author": "Chronograph (https://www.chronograph.pe/)",
+  "homepage": "https://www.chronograph.pe/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Chronograph LP",
+    "shortDescription": "Trusted portfolio data for private capital LP teams",
+    "longDescription": "Chronograph LP provides portfolio monitoring and analytics for private capital Limited Partner users. Access trusted private markets portfolio data, from underlying portfolio companies and assets to funds, vehicles, commitments, and more.",
+    "developerName": "Chronograph",
+    "websiteURL": "https://www.chronograph.pe/",
+    "category": "Finance"
+  }
+}

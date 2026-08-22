@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "readwise",
+  "version": "1.0.3",
+  "description": "The official app for Readwise and Reader.",
+  "author": "Readwise Inc. (https://readwise.io)",
+  "homepage": "https://readwise.io",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Readwise",
+    "shortDescription": "The official app for Readwise and Reader.",
+    "longDescription": "The official app for Readwise and Reader. \n\nThis app allows you to have Codex semantically search through all of your highlights, and any content saved to your Reader library.\n\nMore than that, it can do basically anything you can do in Reader! Triage your inbox, organize your library, catch up on your feed, and much more -- just ask :)",
+    "developerName": "Readwise Inc.",
+    "websiteURL": "https://readwise.io",
+    "category": "Education & Research"
+  }
+}

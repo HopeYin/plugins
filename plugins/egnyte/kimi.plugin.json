@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "egnyte",
+  "version": "1.0.3",
+  "description": "Work with documents and files stored in Egnyte directly from Codex.",
+  "author": "Egnyte Inc (https://www.egnyte.com)",
+  "homepage": "https://www.egnyte.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Egnyte",
+    "shortDescription": "Work with documents and files stored in Egnyte directly from Codex.",
+    "longDescription": "Work with documents and files stored in Egnyte directly from Codex. Search across folders, retrieve relevant files, and extract key information to answer questions or generate summaries.\n\nQuickly surface insights from contracts, reports, and internal documents. Combine information from multiple files to create concise summaries, stakeholder updates, or draft written content grounded in your team’s internal materials.",
+    "developerName": "Egnyte Inc",
+    "websiteURL": "https://www.egnyte.com",
+    "category": "Productivity"
+  }
+}

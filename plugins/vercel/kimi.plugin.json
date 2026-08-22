@@ -1,0 +1,34 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "vercel",
+  "version": "0.21.3",
+  "description": "Build and deploy web apps and agents",
+  "keywords": [
+    "vercel",
+    "nextjs",
+    "ai-sdk",
+    "turborepo",
+    "turbopack",
+    "workflow",
+    "deployment",
+    "edge-functions",
+    "serverless",
+    "ai-gateway",
+    "chat-sdk",
+    "chat-bot",
+    "slack-bot",
+    "discord-bot"
+  ],
+  "author": "Vercel Labs (https://github.com/vercel)",
+  "homepage": "https://vercel.com/",
+  "license": "Apache-2.0",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Vercel",
+    "shortDescription": "Build and deploy web apps and agents",
+    "longDescription": "Bring Vercel ecosystem guidance into Codex with curated skills and the connected Vercel app. Packages the upstream vercel/vercel-plugin skills, agents, and commands under the local `vercel` plugin identity for the Codex plugin marketplace.",
+    "developerName": "Vercel Labs",
+    "websiteURL": "https://vercel.com/",
+    "category": "Developer Tools"
+  }
+}

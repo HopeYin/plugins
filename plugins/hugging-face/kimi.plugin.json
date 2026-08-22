@@ -1,0 +1,25 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "hugging-face",
+  "version": "1.0.3",
+  "description": "Inspect models, datasets, Spaces, and research",
+  "keywords": [
+    "hugging-face",
+    "models",
+    "datasets",
+    "spaces",
+    "machine-learning"
+  ],
+  "author": "Hugging Face (https://huggingface.co)",
+  "homepage": "https://huggingface.co",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Hugging Face",
+    "shortDescription": "Inspect models, datasets, Spaces, and research",
+    "longDescription": "Connect to the Hugging Face Hub to explore Models and Datasets, access SDK Documentation and more. Manage Machine Learning Jobs and connect to thousands of AI applications via Spaces.",
+    "developerName": "Hugging Face",
+    "websiteURL": "https://huggingface.co",
+    "category": "Developer Tools"
+  }
+}

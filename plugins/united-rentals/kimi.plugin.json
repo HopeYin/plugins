@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "united-rentals",
+  "version": "1.0.3",
+  "description": "Get the right equipment for the job without guesswork.",
+  "author": "United Rentals (https://www.unitedrentals.com)",
+  "homepage": "https://www.unitedrentals.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "United Rentals",
+    "shortDescription": "Get the right equipment for the job without guesswork.",
+    "longDescription": "Get the right equipment for the job without guesswork. Share your project details and receive tailored equipment recommendations, along with specifications to support confident selection.",
+    "developerName": "United Rentals",
+    "websiteURL": "https://www.unitedrentals.com",
+    "category": "Productivity"
+  }
+}

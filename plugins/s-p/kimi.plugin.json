@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "s-p",
+  "version": "1.0.3",
+  "description": "Query S&P Global financial datasets",
+  "author": "S&P Global (https://www.spglobal.com)",
+  "homepage": "https://www.spglobal.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "S&P Global",
+    "shortDescription": "Query S&P Global financial datasets",
+    "longDescription": "Use natural language to query a range of S&P Global datasets, including S&P Capital IQ Financials, transcripts, and more. Designed to save time and resources for engineering, product, and business teams in financial services, this server streamlines access to company information, financial statements, historical market data, and global securities.",
+    "developerName": "S&P Global",
+    "websiteURL": "https://www.spglobal.com",
+    "category": "Finance"
+  }
+}

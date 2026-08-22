@@ -1,0 +1,25 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "openai-ads-conversions",
+  "version": "0.1.0",
+  "description": "Set up OpenAI Ads Measurement Pixel and optional Conversions API instrumentation.",
+  "keywords": [
+    "openai-ads",
+    "ads",
+    "conversions",
+    "measurement-pixel",
+    "capi"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://developers.openai.com/ads/",
+  "license": "Proprietary",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OpenAI Ads Conversions",
+    "shortDescription": "Set up OpenAI Ads Pixel and CAPI tracking",
+    "longDescription": "Use OpenAI Ads Conversions to guide Codex through adding or extending Measurement Pixel and optional Conversions API instrumentation in a repository, with local verification helpers and guidance for safe secret handling, deduplication, attribution context, and setup reporting.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://developers.openai.com/ads/",
+    "category": "Developer Tools"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "codex-security",
+  "version": "0.1.11",
+  "description": "Codex Security workflows for security scans, analysis, and investigation.",
+  "keywords": [
+    "security",
+    "code-review",
+    "diff-review",
+    "appsec",
+    "threat-modeling"
+  ],
+  "author": "OpenAI",
+  "homepage": "https://developers.openai.com/codex/security",
+  "license": "Proprietary",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Security",
+    "shortDescription": "Security scanning for your codebase",
+    "longDescription": "Codex Security packages reusable workflows for security scans, analysis, validation, and investigation across code, diffs, and related artifacts.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://openai.com/",
+    "category": "Security"
+  },
+  "mcpServers": "./.mcp.json"
+}

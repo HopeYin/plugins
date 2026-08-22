@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "quicknode",
+  "version": "1.0.3",
+  "description": "Manage your Quicknode infrastructure directly in OpenAI.",
+  "author": "Quicknode (https://www.quicknode.com/)",
+  "homepage": "https://www.quicknode.com/",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Quicknode",
+    "shortDescription": "Manage your Quicknode infrastructure directly in OpenAI.",
+    "longDescription": "Manage your Quicknode infrastructure directly in OpenAI. Create and manage endpoints, monitor logs and usage, configure security and rate limits, and review billing from one conversation.",
+    "developerName": "Quicknode",
+    "websiteURL": "https://www.quicknode.com/",
+    "category": "Developer Tools"
+  }
+}

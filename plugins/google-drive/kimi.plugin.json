@@ -1,0 +1,25 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "google-drive",
+  "version": "0.1.7",
+  "description": "Use Google Drive as the single entrypoint for Drive, Docs, Sheets, and Slides work.",
+  "keywords": [
+    "google-drive",
+    "google-docs",
+    "google-sheets",
+    "google-slides",
+    "productivity"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://workspace.google.com/products/drive/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Google Drive",
+    "shortDescription": "Work across Drive, Docs, Sheets, and Slides",
+    "longDescription": "Use Google Drive as one unified Google file plugin for search, file organization, sharing, and Google Docs, Google Sheets, and Google Slides workflows.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://workspace.google.com/products/drive/",
+    "category": "Productivity"
+  }
+}

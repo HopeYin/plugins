@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "zoho",
+  "version": "1.0.3",
+  "description": "Manage Zoho CRM sales workflows",
+  "author": "Zoho (https://www.zoho.com)",
+  "homepage": "https://www.zoho.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Zoho",
+    "shortDescription": "Manage Zoho CRM sales workflows",
+    "longDescription": "Zoho CRM is an AI-powered sales software that helps businesses of all sizes manage their sales better. With SFA features, advanced automation, easy-to-use UI, advanced analytics, and deep customization capabilities, Zoho CRM truly understands your business. \n\nWith Codex, you can extend the functionalities of Zoho CRM by simply prompting. Your business, your Zoho CRM—powered by Codex.",
+    "developerName": "Zoho",
+    "websiteURL": "https://www.zoho.com",
+    "category": "Business & Operations"
+  }
+}

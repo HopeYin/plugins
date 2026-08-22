@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "dovetail",
+  "version": "1.0.3",
+  "description": "Connect Dovetail inside Codex to turn customer feedback into decisions without leaving your conversation.",
+  "author": "Dovetail (https://dovetail.com)",
+  "homepage": "https://dovetail.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Dovetail ",
+    "shortDescription": "Connect Dovetail inside Codex to turn customer feedback into decisions without leaving your conversation.",
+    "longDescription": "Connect Dovetail inside Codex to turn customer feedback into decisions without leaving your conversation. Search your Dovetail workspace for relevant projects, notes, docs, and themes, and get results back instantly. Ask things like “Summarize top friction points impacting enterprise renewal conversations” to surface evidence in seconds.",
+    "developerName": "Dovetail",
+    "websiteURL": "https://dovetail.com",
+    "category": "Productivity"
+  }
+}

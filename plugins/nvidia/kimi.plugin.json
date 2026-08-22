@@ -1,0 +1,33 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "nvidia",
+  "version": "1.0.2",
+  "description": "Skills for NVIDIAs ecosystem spans GPU acceleration, CUDA, AI agents, inference, robotics, Physical AI, Omniverse, and simulation. This plugin helps you understand the pieces, choose a path, validate your setup, and build practical NVIDIA-powered workflows.",
+  "keywords": [
+    "nvidia",
+    "gpu",
+    "cuda",
+    "ai-agents",
+    "inference",
+    "llm-serving",
+    "robotics",
+    "simulation",
+    "omniverse",
+    "openusd",
+    "digital-twin",
+    "physical-ai",
+    "cad"
+  ],
+  "author": "NVIDIA (https://github.com/NVIDIA/skills)",
+  "homepage": "https://build.nvidia.com/skills/",
+  "license": "Apache-2.0 AND CC-BY-4.0",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "NVIDIA",
+    "shortDescription": "Guided help for NVIDIA AI, GPU, robotics, simulation, and 3D workflows.",
+    "longDescription": "NVIDIAs ecosystem spans GPU acceleration, CUDA, AI agents, inference, robotics, Physical AI, Omniverse, and simulation. This plugin helps you understand the pieces, choose a path, validate your setup, and build practical NVIDIA-powered workflows.",
+    "developerName": "NVIDIA",
+    "websiteURL": "https://www.nvidia.com/",
+    "category": "Developer Tools"
+  }
+}

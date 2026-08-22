@@ -1,0 +1,29 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "game-studio",
+  "version": "0.1.2",
+  "description": "Design, prototype, and ship browser games with guided 2D and 3D workflows, asset pipelines, and playtesting support.",
+  "keywords": [
+    "games",
+    "phaser",
+    "threejs",
+    "react-three-fiber",
+    "gltf",
+    "rapier",
+    "webgl",
+    "sprites",
+    "playtest"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://openai.com/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Game Studio",
+    "shortDescription": "Design, prototype, and ship browser games",
+    "longDescription": "Plan, prototype, and build browser games with guided workflows for gameplay systems, UI, asset pipelines, and playtesting across 2D and 3D projects.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://openai.com/",
+    "category": "Developer Tools"
+  }
+}

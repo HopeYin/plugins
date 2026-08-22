@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "shutterstock",
+  "version": "1.0.3",
+  "description": "Search stock media libraries",
+  "author": "Shutterstock (https://www.shutterstock.com)",
+  "homepage": "https://www.shutterstock.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Shutterstock",
+    "shortDescription": "Search stock media libraries",
+    "longDescription": "Searches stock libraries to find candidate images, videos, music, and sound effects that match user-specified subjects, styles, moods, or settings, returning watermarked preview URLs with basic metadata for selection. Use when users want to browse or choose existing stock media (including multiple grouped image searches), not to generate, edit, license, or download files.",
+    "developerName": "Shutterstock",
+    "websiteURL": "https://www.shutterstock.com",
+    "category": "Creativity"
+  }
+}

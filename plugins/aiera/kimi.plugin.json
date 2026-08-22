@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "aiera",
+  "version": "1.0.2",
+  "description": "Institutional financial data and events",
+  "author": "Aiera (https://www.aiera.com)",
+  "homepage": "https://www.aiera.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Aiera",
+    "shortDescription": "Institutional financial data and events",
+    "longDescription": "Access institutional-grade financial data from Aiera, including live corporate events, filings, company publications, broker research, and much more.",
+    "developerName": "Aiera",
+    "websiteURL": "https://www.aiera.com",
+    "category": "Finance"
+  }
+}

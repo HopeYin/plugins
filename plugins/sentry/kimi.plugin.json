@@ -1,0 +1,23 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "sentry",
+  "version": "0.1.2",
+  "description": "Inspect recent issues and events in Sentry from Codex.",
+  "keywords": [
+    "sentry",
+    "observability",
+    "triage"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://sentry.io/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Sentry",
+    "shortDescription": "Inspect recent Sentry issues and events",
+    "longDescription": "Use Sentry skills to inspect recent issues, review events, and summarize production errors with a read-only workflow.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://sentry.io/",
+    "category": "Developer Tools"
+  }
+}

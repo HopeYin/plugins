@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "zoominfo",
+  "version": "1.0.2",
+  "description": "Prospecting and account research with ZoomInfo",
+  "author": "ZoomInfo (https://www.zoominfo.com)",
+  "homepage": "https://www.zoominfo.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "ZoomInfo",
+    "shortDescription": "Prospecting and account research with ZoomInfo",
+    "longDescription": "Access ZoomInfo’s data and AI context within ChatGPT. Prospecting, Account Research, Verified Contacts, buying signals, and more are now available directly in your conversations.",
+    "developerName": "ZoomInfo",
+    "websiteURL": "https://www.zoominfo.com",
+    "category": "Business & Operations"
+  }
+}

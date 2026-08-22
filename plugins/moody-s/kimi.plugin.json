@@ -1,0 +1,40 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "moody-s",
+  "version": "1.0.2",
+  "description": "Credit ratings, entity intelligence, and research via Moody's GenAI-Ready Data.",
+  "keywords": [
+    "moodys",
+    "credit",
+    "ratings",
+    "research",
+    "risk",
+    "entity-intelligence",
+    "ownership",
+    "beneficial-ownership",
+    "corporate-structure",
+    "subsidiaries",
+    "financial-statements",
+    "company-filings",
+    "credit-opinion",
+    "scorecards",
+    "esg",
+    "sector-outlook",
+    "country-risk",
+    "peers",
+    "earnings-calls",
+    "news"
+  ],
+  "author": "Moody's (https://www.moodys.com)",
+  "homepage": "https://www.moodys.com/web/en/us/genai/model-context-protocol.html",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Moody's",
+    "shortDescription": "Credit ratings, research, entity intelligence, ownership, financials, and filings.",
+    "longDescription": "Connect to Moody's GenAI-Ready Data through the enterprise MCP integration. Resolve covered entities, retrieve ratings and outlooks, analyze credit opinions, scorecards, upgrade/downgrade drivers, ESG considerations, ownership structures, subsidiaries, company profiles, financial statements, filings, earnings-call transcripts, news, peer sets, sector outlooks, and country-risk context, all within your workflow.",
+    "developerName": "Moody's",
+    "websiteURL": "https://www.moodys.com",
+    "category": "Finance"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "responsive",
+  "version": "1.0.3",
+  "description": "The Responsive App makes it easy to work with your organization’s data inside Codex.",
+  "author": "RFPIO Inc. (d/b/a Responsive) (https://www.responsive.io)",
+  "homepage": "https://www.responsive.io",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Responsive",
+    "shortDescription": "The Responsive App makes it easy to work with your organization’s data inside Codex.",
+    "longDescription": "The Responsive App makes it easy to work with your organization’s data inside Codex. Search your Content Library and generate responses so you can move faster with trusted information and without switching tools.",
+    "developerName": "RFPIO Inc. (d/b/a Responsive)",
+    "websiteURL": "https://www.responsive.io",
+    "category": "Productivity"
+  }
+}

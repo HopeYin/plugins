@@ -1,0 +1,29 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "base44",
+  "version": "1.0.3-beta.1",
+  "description": "Build and deploy Base44 full-stack apps with CLI project management and JavaScript/TypeScript SDK development skills",
+  "keywords": [
+    "base44",
+    "full-stack",
+    "sdk",
+    "cli",
+    "deployment",
+    "entities",
+    "backend-functions",
+    "javascript",
+    "typescript"
+  ],
+  "author": "base44 (https://base44.com)",
+  "homepage": "https://docs.base44.com",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Base44",
+    "shortDescription": "Build and deploy Base44 full-stack apps from Codex",
+    "longDescription": "Build and deploy Base44 full-stack apps with Codex. Includes CLI project management, JavaScript/TypeScript SDK development, and production troubleshooting skills.",
+    "developerName": "base44",
+    "websiteURL": "https://base44.com",
+    "category": "Developer Tools"
+  }
+}

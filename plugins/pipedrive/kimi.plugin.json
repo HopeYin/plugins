@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "pipedrive",
+  "version": "1.0.3",
+  "description": "Connect to sync Pipedrive deals and contacts for use in Codex.",
+  "author": "OpenAI (https://www.pipedrive.com/)",
+  "homepage": "https://www.pipedrive.com/",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Pipedrive",
+    "shortDescription": "Connect to sync Pipedrive deals and contacts for use in Codex.",
+    "longDescription": "Connect to sync Pipedrive deals and contacts for use in Codex.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://www.pipedrive.com/",
+    "category": "Business & Operations"
+  }
+}

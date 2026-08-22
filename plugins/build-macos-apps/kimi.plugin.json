@@ -1,0 +1,31 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "build-macos-apps",
+  "version": "0.1.4",
+  "description": "Build, run, test, debug, instrument, and implement local macOS apps using Xcode, SwiftUI, AppKit interop, unified logging, and shell-first desktop workflows.",
+  "keywords": [
+    "macos",
+    "swift",
+    "swiftui",
+    "appkit",
+    "xcode",
+    "swiftpm",
+    "debugging",
+    "codesign",
+    "logging",
+    "telemetry",
+    "oslog"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://openai.com/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Build macOS Apps",
+    "shortDescription": "Build, debug, instrument, and implement macOS apps with SwiftUI and AppKit guidance",
+    "longDescription": "macOS development workflows for discovering local projects, building and running desktop apps, implementing native SwiftUI scenes, bridging into AppKit when necessary, adding lightweight Logger telemetry, triaging test failures, inspecting signing and entitlements, and debugging desktop-specific build or runtime errors.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://openai.com/",
+    "category": "Developer Tools"
+  }
+}

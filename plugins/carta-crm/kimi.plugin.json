@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "carta-crm",
+  "version": "1.0.3",
+  "description": "Carta CRM helps investment teams stay on top of deal flow by keeping deals, companies, and relationships in...",
+  "author": "Carta Inc. (https://carta.com)",
+  "homepage": "https://carta.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Carta CRM",
+    "shortDescription": "Carta CRM helps investment teams stay on top of deal flow by keeping deals, companies, and relationships in...",
+    "longDescription": "Carta CRM helps investment teams stay on top of deal flow by keeping deals, companies, and relationships in one place. Track opportunities through each stage, capture meeting notes and key takeaways alongside the right deal or contact, and quickly find past context when you need it.",
+    "developerName": "Carta Inc.",
+    "websiteURL": "https://carta.com",
+    "category": "Business & Operations"
+  }
+}

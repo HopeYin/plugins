@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "docket",
+  "version": "1.0.3",
+  "description": "Docket AI makes your sales knowledge your instant superpower.",
+  "author": "Docket AI (https://www.docket.io/)",
+  "homepage": "https://www.docket.io/",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Docket",
+    "shortDescription": "Docket AI makes your sales knowledge your instant superpower.",
+    "longDescription": "Docket AI makes your sales knowledge your instant superpower. Sales reps get accurate, on-demand answers to product, competitive, technical, and customer questions—pulled directly from your unified Sales Knowledge Lake™. Guided by verified company intel, reps handle objections confidently, uncover prospect details, and craft personalised responses on the spot.",
+    "developerName": "Docket AI",
+    "websiteURL": "https://www.docket.io/",
+    "category": "Productivity"
+  }
+}

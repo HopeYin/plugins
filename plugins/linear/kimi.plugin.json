@@ -1,0 +1,19 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "linear",
+  "version": "0.0.3",
+  "description": "Find and reference issues and projects.",
+  "author": "OpenAI (https://linear.app/)",
+  "homepage": "https://linear.app/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Linear",
+    "shortDescription": "Find and reference issues and projects.",
+    "longDescription": "Manage issues, projects, and team workflows in Linear from Codex.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://linear.app/",
+    "category": "Productivity"
+  },
+  "mcpServers": "./.mcp.json"
+}
