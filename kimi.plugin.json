@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "similarweb",
+  "version": "1.0.2",
+  "description": "Research web and app market intelligence",
+  "author": "Similarweb (https://www.similarweb.com)",
+  "homepage": "https://www.similarweb.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Similarweb",
+    "shortDescription": "Research web and app market intelligence",
+    "longDescription": "Research any website or app inside ChatGPT using Similarweb's market intelligence data. Analyze competitor traffic, uncover top keywords, explore audience demographics, and benchmark performance across industries—all through simple prompts. Ask things like \"Show me Nike's traffic sources breakdown\" or \"What keywords is Adidas ranking for?\" and get real-time insights without switching tools. Whether you're a marketer, analyst, investor, or strategist, Similarweb helps you turn competitive questions into answers instantly.",
+    "developerName": "Similarweb",
+    "websiteURL": "https://www.similarweb.com",
+    "category": "Data & Analytics"
+  }
+}
