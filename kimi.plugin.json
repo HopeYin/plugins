@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "teamwork-com",
+  "version": "1.0.3",
+  "description": "Connect to sync Teamwork projects and tasks for use in Codex.",
+  "author": "OpenAI (https://www.teamwork.com/)",
+  "homepage": "https://www.teamwork.com/",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Teamwork.com",
+    "shortDescription": "Connect to sync Teamwork projects and tasks for use in Codex.",
+    "longDescription": "Connect to sync Teamwork projects and tasks for use in Codex.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://www.teamwork.com/",
+    "category": "Productivity"
+  }
+}
