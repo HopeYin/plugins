@@ -1,0 +1,27 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "notion",
+  "version": "0.1.5",
+  "description": "Notion workflows for implementation planning, research synthesis, meeting preparation, and knowledge capture.",
+  "keywords": [
+    "notion",
+    "documentation",
+    "research",
+    "meeting-prep",
+    "knowledge-management",
+    "planning"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://www.notion.so/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Notion",
+    "shortDescription": "Notion workflows for specs, research, meetings, and knowledge capture",
+    "longDescription": "Notion workflows for turning specs into implementation plans, synthesizing research into structured documentation, preparing meeting materials with workspace context, and capturing decisions or conversations into durable knowledge pages.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://www.notion.so/",
+    "category": "Productivity"
+  },
+  "mcpServers": "./.mcp.json"
+}
