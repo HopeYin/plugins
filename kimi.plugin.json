@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "govtribe",
+  "version": "1.0.3",
+  "description": "Search government contracts, awards, and vendors directly from Codex.",
+  "author": "Government Executive Media Group LLC (https://govtribe.com/)",
+  "homepage": "https://govtribe.com/",
+  "license": "MIT",
+  "interface": {
+    "displayName": "GovTribe",
+    "shortDescription": "Search government contracts, awards, and vendors directly from Codex.",
+    "longDescription": "Search government contracts, awards, and vendors directly from Codex. GovTribe brings U.S. procurement intelligence into your AI workflow—find relevant opportunities across federal agencies; analyze vendor competition; explore teaming partners; and track agency spending patterns. Whether you're researching new markets, conducting competitive analysis, or preparing a proposal, get instant access to billions in public sector data without leaving your conversation.",
+    "developerName": "Government Executive Media Group LLC",
+    "websiteURL": "https://govtribe.com/",
+    "category": "Education & Research"
+  }
+}
