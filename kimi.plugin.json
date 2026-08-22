@@ -1,0 +1,29 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "remotion",
+  "version": "1.0.3",
+  "description": "Remotion video creation skills — best practices, animations, audio, captions, 3D, and more for building programmatic videos with React.",
+  "keywords": [
+    "remotion",
+    "video",
+    "react",
+    "animation",
+    "composition",
+    "rendering",
+    "ffmpeg",
+    "captions",
+    "audio"
+  ],
+  "author": "Remotion <hi@remotion.dev> (https://remotion.dev)",
+  "homepage": "https://remotion.dev",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Remotion",
+    "shortDescription": "Create motion graphics from prompts",
+    "longDescription": "Build videos programmatically with Remotion and React. Covers animations, timing, audio, captions, 3D, transitions, charts, text effects, and more.",
+    "developerName": "Remotion",
+    "websiteURL": "https://remotion.dev",
+    "category": "Creativity"
+  }
+}
