@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "datadog",
+  "version": "0.1.2",
+  "description": "Investigate Datadog telemetry and workflows from Codex",
+  "author": "Datadog (https://www.datadoghq.com/)",
+  "homepage": "https://www.datadoghq.com/",
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "Datadog (Preview)",
+    "shortDescription": "Investigate logs, metrics, traces, and incidents",
+    "longDescription": "Analyze, investigate, and act on your Datadog telemetry directly from Codex using natural language. Ask questions about your production applications, identify, visualize, and remediate issues in your critical services. Run agentic loops to ensure you continue to maintain good observability and service management posture.",
+    "developerName": "Datadog",
+    "websiteURL": "https://www.datadoghq.com/",
+    "category": "Developer Tools"
+  }
+}
