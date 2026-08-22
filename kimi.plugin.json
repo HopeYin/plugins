@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "sendgrid",
+  "version": "0.1.2",
+  "description": "Connector for interacting with the SendGrid email API.",
+  "author": "OpenAI (https://sendgrid.com/)",
+  "homepage": "https://sendgrid.com/",
+  "license": "MIT",
+  "interface": {
+    "displayName": "SendGrid",
+    "shortDescription": "Connector for interacting with the SendGrid email API.",
+    "longDescription": "Connector for interacting with the SendGrid email API.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://sendgrid.com/",
+    "category": "Developer Tools"
+  }
+}
