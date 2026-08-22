@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "thoughtspot",
+  "version": "1.0.3",
+  "description": "Trusted business data answers",
+  "author": "ThoughtSpot (https://www.thoughtspot.com)",
+  "homepage": "https://www.thoughtspot.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "ThoughtSpot",
+    "shortDescription": "Trusted business data answers",
+    "longDescription": "From everyday data questions to high-level strategic analyses, Spotter by ThoughtSpot helps business and data teams get answers and insights they can trust, validate, and act on, enabling everyone to use data to drive the business forward.",
+    "developerName": "ThoughtSpot",
+    "websiteURL": "https://www.thoughtspot.com",
+    "category": "Data & Analytics"
+  }
+}
