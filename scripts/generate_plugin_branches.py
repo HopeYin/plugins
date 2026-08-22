@@ -21,7 +21,8 @@ def run(cmd, cwd=None, check=True):
     if result.stdout:
         print(result.stdout)
     if result.stderr:
-        print(result.stderr, file=sys.stderr)
+        # Mirror stderr to stdout so background-task logs capture the actual Git error.
+        print(result.stderr)
     if check and result.returncode != 0:
         raise RuntimeError(f"Command failed: {' '.join(cmd)}")
     return result
@@ -45,6 +46,25 @@ def copy_plugin_to_worktree(plugin_dir: Path):
 def build_branch(plugin_dir: Path):
     branch = f"plugin/{plugin_dir.name}"
     print(f"\n=== Building branch {branch} ===")
+
+    # If the branch already exists on origin, assume it was pushed successfully.
+    ls_remote = subprocess.run(
+        ["git", "ls-remote", "--heads", "origin", branch],
+        cwd=REPO_ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if ls_remote.stdout.strip():
+        print(f"SKIP {branch}: already exists on origin")
+        return
+
+    # Remove any stale local branch left by a previous interrupted run.
+    subprocess.run(
+        ["git", "branch", "-D", branch],
+        cwd=REPO_ROOT,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
 
     # Create a fresh orphan branch for this plugin
     run(["git", "checkout", "--orphan", branch], cwd=WORKTREE)
