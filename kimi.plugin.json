@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "happenstance",
+  "version": "1.0.3",
+  "description": "Happenstance searches your professional network using natural language to find the right people.",
+  "author": "Happenstance, Inc. (https://happenstance.ai)",
+  "homepage": "https://happenstance.ai",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Happenstance",
+    "shortDescription": "Happenstance searches your professional network using natural language to find the right people.",
+    "longDescription": "Happenstance searches your professional network using natural language to find the right people. Results surface mutual connections and rank by relationship strength, helping you find the warmest intro path. Deep research anyone to get comprehensive profiles with career history and expertise. Ideal for sales, recruiting, venture capital, and business development.",
+    "developerName": "Happenstance, Inc.",
+    "websiteURL": "https://happenstance.ai",
+    "category": "Productivity"
+  }
+}
