@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "monday-com",
+  "version": "1.0.2",
+  "description": "A powerful MCP connector enabling AI agents to seamlessly interact with monday.com.",
+  "author": "Monday.com (https://monday.com)",
+  "homepage": "https://monday.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Monday.com",
+    "shortDescription": "A powerful MCP connector enabling AI agents to seamlessly interact with monday.com.",
+    "longDescription": "A powerful MCP connector enabling AI agents to seamlessly interact with monday.com. This connector provides comprehensive access to monday.com features including board management, item operations, dashboards, and more, allowing AI assistants to help manage projects, gain insights, and automate workflows within monday.com.",
+    "developerName": "Monday.com",
+    "websiteURL": "https://monday.com",
+    "category": "Productivity"
+  }
+}
