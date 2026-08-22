@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "jam",
+  "version": "1.0.2",
+  "description": "Screen record with context",
+  "author": "Jam (https://jam.dev)",
+  "homepage": "https://jam.dev",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Jam",
+    "shortDescription": "Screen record with context",
+    "longDescription": "Screen record with context",
+    "developerName": "Jam",
+    "websiteURL": "https://jam.dev",
+    "category": "Productivity"
+  }
+}
