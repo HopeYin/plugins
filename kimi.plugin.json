@@ -1,0 +1,26 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "rox",
+  "version": "1.0.3",
+  "description": "Analyze sales data from Rox workspaces",
+  "keywords": [
+    "rox",
+    "sales",
+    "revenue",
+    "gtm",
+    "crm",
+    "account-intelligence",
+    "prospecting"
+  ],
+  "author": "Rox Data Corp (https://www.rox.com)",
+  "homepage": "https://www.rox.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Rox",
+    "shortDescription": "Analyze sales data from Rox workspaces",
+    "longDescription": "Rox helps users find and analyze authenticated sales data from their Rox workspace, including accounts, deals, contacts, notes, emails, meetings, documents, org charts, and Slack activity. The app exposes a guided data interface: users can discover available data functions, inspect each function's schema and workflow guidance, then invoke read-only functions to answer sales and account intelligence questions.",
+    "developerName": "Rox Data Corp",
+    "websiteURL": "https://www.rox.com",
+    "category": "Productivity"
+  }
+}
