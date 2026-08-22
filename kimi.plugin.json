@@ -1,0 +1,25 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "morningstar",
+  "version": "1.0.3",
+  "description": "Morningstar fund research plugin for screening, summarizing, and comparing funds and ETFs using the Morningstar ChatGPT app.",
+  "keywords": [
+    "morningstar",
+    "funds",
+    "etf",
+    "research",
+    "screening"
+  ],
+  "author": "Morningstar (https://www.morningstar.com)",
+  "homepage": "https://www.morningstar.com",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Morningstar",
+    "shortDescription": "Screen, summarize, and compare funds with the Morningstar app.",
+    "longDescription": "Bundled Morningstar fund workflows for Codex: production screening with normalization, fund returns screening, single-fund deep summaries, and side-by-side comparison for 2 to 4 funds. The plugin links to the reviewed Morningstar ChatGPT app for authenticated data access and includes explicit data-availability disclosures.",
+    "developerName": "Morningstar",
+    "websiteURL": "https://www.morningstar.com",
+    "category": "Finance"
+  }
+}
