@@ -1,0 +1,15 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "amplitude",
+  "version": "1.0.2",
+  "description": "Product analytics and funnels",
+  "author": "Amplitude",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Amplitude",
+    "shortDescription": "Product analytics and funnels",
+    "longDescription": "Product analytics and funnels",
+    "developerName": "Amplitude",
+    "category": "Data & Analytics"
+  }
+}
