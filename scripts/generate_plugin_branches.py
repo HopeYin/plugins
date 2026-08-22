@@ -50,7 +50,13 @@ def build_branch(plugin_dir: Path):
     run(["git", "checkout", "--orphan", branch], cwd=WORKTREE)
 
     # Wipe the worktree clean (leave the .git directory)
-    run(["git", "rm", "--cached", "-rf", "."], cwd=WORKTREE)
+    subprocess.run(
+        ["git", "rm", "--cached", "-rf", "."],
+        cwd=WORKTREE,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        check=True,
+    )
     for child in WORKTREE.iterdir():
         if child.name == ".git":
             continue
