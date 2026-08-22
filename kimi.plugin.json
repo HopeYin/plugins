@@ -1,0 +1,25 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "calendly",
+  "version": "1.0.2",
+  "description": "Scheduling links, availability, and bookings",
+  "keywords": [
+    "calendly",
+    "calendar",
+    "scheduling",
+    "meetings",
+    "availability",
+    "events"
+  ],
+  "author": "Calendly (https://calendly.com)",
+  "homepage": "https://calendly.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Calendly",
+    "shortDescription": "Scheduling links, availability, and bookings",
+    "longDescription": "Bring Calendly into ChatGPT to take scheduling actions through simple prompts. Create and update event types, generate scheduling links, adjust availability, book or cancel meetings, and more — right in ChatGPT.",
+    "developerName": "Calendly",
+    "websiteURL": "https://calendly.com",
+    "category": "Productivity"
+  }
+}
