@@ -1,0 +1,23 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "outlook-email",
+  "version": "0.1.3",
+  "description": "Work with Outlook Email using the configured Microsoft Outlook app connector.",
+  "keywords": [
+    "outlook-email",
+    "email",
+    "microsoft"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Outlook Email",
+    "shortDescription": "Triage Outlook inboxes and draft replies",
+    "longDescription": "Use Outlook Email to triage inboxes, summarize threads, extract actions, and draft replies or forwards through the connected Microsoft Outlook app.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook",
+    "category": "Communication"
+  }
+}
