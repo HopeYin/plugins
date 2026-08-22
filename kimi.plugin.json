@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "hostinger",
+  "version": "1.0.3",
+  "description": "Hostinger Horizons lets you build real websites and apps just by describing what you want.",
+  "author": "Hostinger (https://hostinger.com)",
+  "homepage": "https://hostinger.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Hostinger",
+    "shortDescription": "Hostinger Horizons lets you build real websites and apps just by describing what you want.",
+    "longDescription": "Hostinger Horizons lets you build real websites and apps just by describing what you want. Designed for people with no technical background, it turns ideas into working products in minutes. When you're happy with the result, launch instantly with one click.",
+    "developerName": "Hostinger",
+    "websiteURL": "https://hostinger.com",
+    "category": "Developer Tools"
+  }
+}
