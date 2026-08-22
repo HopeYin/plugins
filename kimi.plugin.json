@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "docusign",
+  "version": "1.0.3",
+  "description": "Automate contract creation and insights",
+  "author": "Docusign (https://www.docusign.com)",
+  "homepage": "https://www.docusign.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Docusign",
+    "shortDescription": "Automate contract creation and insights",
+    "longDescription": "Simplify contract management with intelligent automation powered by Docusign. Go beyond simple execution to make complex agreement workflows effortless. Use natural language to create and send a contract, instantly surface insights like renewal dates and key obligations, and automate workflows that keep your business moving faster and with less friction.",
+    "developerName": "Docusign",
+    "websiteURL": "https://www.docusign.com",
+    "category": "Productivity"
+  }
+}
