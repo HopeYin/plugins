@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "domotz-preview",
+  "version": "1.0.3",
+  "description": "Monitor and manage your network infrastructure through natural language.",
+  "author": "Domotz (https://www.domotz.com)",
+  "homepage": "https://www.domotz.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Domotz (Preview)",
+    "shortDescription": "Monitor and manage your network infrastructure through natural language.",
+    "longDescription": "Monitor and manage your network infrastructure through natural language. Query devices, check alerts, inspect metrics, manage configurations, and control power across all your sites. Requires a Domotz account enabled to the MCP Preview program.",
+    "developerName": "Domotz",
+    "websiteURL": "https://www.domotz.com",
+    "category": "Productivity"
+  }
+}
