@@ -1,0 +1,23 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "slack",
+  "version": "0.1.2",
+  "description": "Work with Slack using the configured Slack integration.",
+  "keywords": [
+    "slack",
+    "chat",
+    "collaboration"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://slack.com/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Slack",
+    "shortDescription": "Read and manage Slack",
+    "longDescription": "Use Slack to summarize channels, draft messages, and organize team conversations through the connected Slack integration.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://slack.com/",
+    "category": "Communication"
+  }
+}
