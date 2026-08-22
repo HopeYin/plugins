@@ -1,0 +1,17 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "intercom",
+  "version": "1.0.3",
+  "description": "Customer conversations, contacts, tickets, and support workflows from Intercom",
+  "author": "Intercom (https://www.intercom.com)",
+  "homepage": "https://www.intercom.com",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Intercom",
+    "shortDescription": "Customer conversations, contacts, tickets, and support workflows from Intercom",
+    "longDescription": "Customer conversations, contacts, tickets, and support workflows from Intercom",
+    "developerName": "Intercom",
+    "websiteURL": "https://www.intercom.com",
+    "category": "Business & Operations"
+  }
+}
