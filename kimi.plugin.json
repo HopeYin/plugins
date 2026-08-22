@@ -1,0 +1,26 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "hex",
+  "version": "0.1.0",
+  "description": "Hex workflows for searching projects and asking Hex Threads questions about workspace data.",
+  "keywords": [
+    "hex",
+    "data-analysis",
+    "analytics",
+    "threads",
+    "dashboards",
+    "notebooks"
+  ],
+  "author": "OpenAI",
+  "homepage": "https://hex.tech/",
+  "license": "Proprietary",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Hex",
+    "shortDescription": "Search Hex projects and ask Hex Threads questions",
+    "longDescription": "Hex helps users find existing Hex projects, dashboards, and data apps, then ask Hex Threads questions when the user explicitly wants to work in Hex.",
+    "developerName": "Hex",
+    "websiteURL": "https://hex.tech/",
+    "category": "Data & Analytics"
+  }
+}
