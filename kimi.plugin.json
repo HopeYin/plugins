@@ -1,0 +1,24 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "coderabbit",
+  "version": "1.1.4",
+  "description": "AI-powered code review in Codex, powered by CodeRabbit.",
+  "keywords": [
+    "code-review",
+    "ai",
+    "coderabbit",
+    "codex"
+  ],
+  "author": "CodeRabbit AI <support@coderabbit.ai> (https://coderabbit.ai)",
+  "homepage": "https://docs.coderabbit.ai/cli/overview",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "CodeRabbit",
+    "shortDescription": "Run AI-powered code review for your current changes",
+    "longDescription": "Run CodeRabbit review workflows in Codex to inspect diffs, surface actionable findings, and turn review output into follow-up fixes.",
+    "developerName": "CodeRabbit",
+    "websiteURL": "https://coderabbit.ai",
+    "category": "Developer Tools"
+  }
+}
