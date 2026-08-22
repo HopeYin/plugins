@@ -1,0 +1,21 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "atlassian-rovo",
+  "version": "1.0.3",
+  "description": "Manage Jira and Confluence fast",
+  "keywords": [
+    "atlassian"
+  ],
+  "author": "Atlassian (https://www.atlassian.com)",
+  "homepage": "https://www.atlassian.com",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Atlassian Rovo",
+    "shortDescription": "Manage Jira and Confluence fast",
+    "longDescription": "Manage Jira and Confluence fast",
+    "developerName": "Atlassian",
+    "websiteURL": "https://www.atlassian.com",
+    "category": "Productivity"
+  }
+}
