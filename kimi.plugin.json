@@ -1,0 +1,29 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "mixpanel-headless",
+  "version": "0.1.2",
+  "description": "Analyze Mixpanel data with the mixpanel_headless Python SDK and Codex skills.",
+  "keywords": [
+    "mixpanel",
+    "analytics",
+    "product-analytics",
+    "python",
+    "data-science",
+    "funnels",
+    "retention",
+    "flows",
+    "dashboards"
+  ],
+  "author": "Mixpanel (https://mixpanel.com/home)",
+  "homepage": "https://mixpanel.github.io/mixpanel-headless/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Mixpanel Headless",
+    "shortDescription": "Analyze Mixpanel data with Python",
+    "longDescription": "Use Mixpanel Headless skills to install and authenticate the mixpanel_headless Python SDK, discover Mixpanel schemas, run segmentation, funnel, retention, flow, and user-profile analyses, and build or inspect Mixpanel dashboards from Codex.",
+    "developerName": "Mixpanel",
+    "websiteURL": "https://mixpanel.com/home",
+    "category": "Data & Analytics"
+  }
+}
