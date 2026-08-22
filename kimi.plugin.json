@@ -1,0 +1,26 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "deepnote",
+  "version": "0.1.5",
+  "description": "Use Deepnote's collaborative data workspace to explore data, automate notebooks and SQL workflows, and turn analysis into shareable results.",
+  "keywords": [
+    "deepnote",
+    "chatgpt-app",
+    "openai",
+    "notebooks",
+    "data",
+    "analytics"
+  ],
+  "author": "Deepnote (https://deepnote.com)",
+  "homepage": "https://deepnote.com",
+  "license": "Apache-2.0",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Deepnote",
+    "shortDescription": "Explore data and automate analysis in Deepnote",
+    "longDescription": "Deepnote gives teams a collaborative workspace for notebooks, SQL, apps, and data workflows. This plugin helps OpenAI work with connected Deepnote projects, inspect and run notebooks, and turn workspace context into useful analysis and shareable results.",
+    "developerName": "Deepnote",
+    "websiteURL": "https://deepnote.com",
+    "category": "Data & Analytics"
+  }
+}
