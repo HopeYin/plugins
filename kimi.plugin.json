@@ -1,0 +1,18 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "stripe",
+  "version": "1.0.2",
+  "description": "Payments and business tools",
+  "author": "Stripe (https://stripe.com)",
+  "homepage": "https://stripe.com",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Stripe",
+    "shortDescription": "Payments and business tools",
+    "longDescription": "Payments and business tools",
+    "developerName": "Stripe",
+    "websiteURL": "https://stripe.com",
+    "category": "Finance"
+  }
+}
