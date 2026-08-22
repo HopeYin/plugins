@@ -1,0 +1,26 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "google-calendar",
+  "version": "1.2.3",
+  "description": "Connect Google Calendar for scheduling, availability, daily briefs, and event management.",
+  "keywords": [
+    "google-calendar",
+    "calendar",
+    "agenda",
+    "daily-brief",
+    "scheduling",
+    "productivity"
+  ],
+  "author": "OpenAI <support@openai.com> (https://openai.com/)",
+  "homepage": "https://workspace.google.com/products/calendar/",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Google Calendar",
+    "shortDescription": "Manage Google Calendar events and schedules",
+    "longDescription": "Use Google Calendar to summarize a day, check availability, list calendars, and create, update, or delete events directly from task prompts.",
+    "developerName": "OpenAI",
+    "websiteURL": "https://workspace.google.com/products/calendar/",
+    "category": "Productivity"
+  }
+}
